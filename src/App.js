@@ -12,25 +12,37 @@ import TokyoDisneyResort from "./pages/resorts/tokyo-disney-resort";
 //parks
 import CaAdventure from "./pages/parks/ca-adventure";
 import Disneyland from "./pages/parks/disneyland";
+//lands
+import Fantasyland from "./pages/lands/fantasyland";
+import StarWars from "./pages/lands/star-wars";
 
 class App extends Component {
 
   render() {
     return (
       <div>
-      <Router>
-      <Switch>
-        <Route exact path='/' render={() => <MainPage />} />
-        <Route exact path='/resorts' render={() => <Resorts />} />
-        <Route exact path='/disneyland-resort' render={() => <DisneylandResort />} />
-        <Route exact path='/disneyworld-resort' render={() => <DisneyworldResort />} />
-        <Route exact path='/tokyo-disney-resort' render={() => <TokyoDisneyResort />} />
-        <Route exact path='/ca-adventure' render={() => <CaAdventure />} />
-        <Route exact path='/disneyland' render={() => <Disneyland />} />
-        <Route exact path='/404' render={() => <NotFoundPage />} />
-        <Redirect to='/404' />
-      </Switch>
-      </Router>
+        <header>
+          <p> Home | Resorts | Parks | Total: 0 </p>
+        </header>
+        <Router>
+          <Switch>
+            <Route exact path='/' render={() => <MainPage />} />
+            <Route exact path='/resorts' render={() => <Resorts />} />
+            <Route exact path='/disneyland-resort' render={() => <DisneylandResort />} />
+            <Route exact path='/disneyworld-resort' render={() => <DisneyworldResort />} />
+            <Route exact path='/tokyo-disney-resort' render={() => <TokyoDisneyResort />} />
+            <Route exact path='/ca-adventure' render={() => <CaAdventure />} />
+            <Route exact path='/disneyland' render={() => <Disneyland />} />
+            <Route exact path='/fantasyland' render={() => <Fantasyland />} />
+            <Route exact path='/star-wars' render={() => <StarWars />} />
+            <Route exact path='/404' render={() => <NotFoundPage />} />
+            <Redirect to='/404' />
+            </Switch>
+          </Router>
+          <footer>
+            <br/>
+            <small>Magical Memories</small>
+          </footer>
       </div>
     );
   }
