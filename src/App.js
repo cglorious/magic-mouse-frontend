@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-d
 import MainPage from "./pages/index"
 import NotFoundPage from "./pages/404";
 //resorts
-import Resorts from "./pages/resorts/resorts";
+import Resorts from "./components/Resorts";
 import DisneylandResort from "./pages/resorts/disneyland-resort";
 import DisneyworldResort from "./pages/resorts/disneyworld-resort";
 import TokyoDisneyResort from "./pages/resorts/tokyo-disney-resort";
