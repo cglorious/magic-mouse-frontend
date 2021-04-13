@@ -1,6 +1,5 @@
-/*users.jsx*/
 import React from "react";
-/* We simply can use an array and loop and print each user */
+
 const UsersPage = () => {
   return (
     <div>
