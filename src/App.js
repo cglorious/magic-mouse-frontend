@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import MainPage from "./pages/index"
-import UsersPage from "./pages/users";
+import Resorts from "./pages/resorts/resorts";
 import NotFoundPage from "./pages/404";
 import DisneylandResort from "./pages/resorts/disneyland-resort";
 import DisneyworldResort from "./pages/resorts/disneyworld-resort";
@@ -18,7 +18,7 @@ class App extends Component {
         <Route exact path='/disneyland-resort' render={() => <DisneylandResort />} />
         <Route exact path='/disneyworld-resort' render={() => <DisneyworldResort />} />
         <Route exact path='/tokyo-disney-resort' render={() => <TokyoDisneyResort />} />
-        <Route exact path='/users' render={() => <UsersPage />} />
+        <Route exact path='/resorts' render={() => <Resorts />} />
         <Route exact path='/404' render={() => <NotFoundPage />} />
         <Redirect to='/404' />
       </Switch>
