@@ -15,6 +15,7 @@ const Resorts = ({resorts}) => {
         location="Anaheim, CA USA"
         image="https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/2/1280/720/75/dam/disneyland/home/destination/sleeping-beauty-castle-tint-16x9.jpg"
         />
+      <br />
       <Resort
         slug="/disneyworld-resort"
         key="2"
@@ -22,6 +23,7 @@ const Resorts = ({resorts}) => {
         location="Orlando, FL, USA"
         image="https://cdn1.parksmedia.wdprapps.disney.com/media/blog/wp-content/uploads/2020/02/bcc92834982402984029834.jpg"
           />
+        <br />
       <Resort
         slug="/tokyo-disney-resort"
         key="3"
