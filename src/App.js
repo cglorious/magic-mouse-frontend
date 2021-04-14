@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
+
+//architecture
 import NavBar from "./components/NavBar"
+import Footer from "./components/Footer"
+
 //pages
 import MainPage from "./components/MainPage"
 import NotFoundPage from "./pages/404";
@@ -37,10 +41,7 @@ class App extends Component {
             <Redirect to='/404' />
             </Switch>
           </Router>
-          <footer>
-            <br/>
-            <small>Magical Memories</small>
-          </footer>
+          <Footer />
       </div>
     );
   }
