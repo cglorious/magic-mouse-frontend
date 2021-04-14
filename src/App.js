@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
-
+import NavBar from "./components/NavBar"
 //pages
 import MainPage from "./components/MainPage"
 import NotFoundPage from "./pages/404";
@@ -21,9 +21,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <header>
-          <p> Home | Resorts | Parks | Total: 0 </p>
-        </header>
+        <NavBar />
         <Router>
           <Switch>
             <Route exact path='/' render={() => <MainPage />} />
