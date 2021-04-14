@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 
 //pages
-import MainPage from "./pages/index"
+import MainPage from "./components/MainPage"
 import NotFoundPage from "./pages/404";
 //resorts
 import Resorts from "./components/Resorts";
