@@ -2,6 +2,10 @@
   width: 18rem;
 }
 
+#card-container{
+  padding: 40px;
+}
+
 #branding{
   text-align: center;
 }

@@ -2,22 +2,24 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import "../styles/style.css";
 
-const Resort = ({ key, slug, image, name, location}) => {
+const Resort = props => {
 
     return(
       <div>
+        <div id="card-container">
         <div className="card" id="resort-card">
           <img
             className="card-img-top"
-            src={image}
-            alt={name}
+            src={props.image}
+            alt={props.name}
             />
           <div className="card-body">
-            <h5 class="card-title">{name}</h5>
-            <p className="card-text">{location}</p>
-            <a href={slug} class="btn btn-primary">Visit</a>
+            <h5 class="card-title">{props.name}</h5>
+            <p className="card-text">{props.location}</p>
+            <a href={props.slug} class="btn btn-primary">Visit</a>
           </div>
         </div>
+      </div>
     </div>
     );
 };
