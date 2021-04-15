@@ -1,5 +1,6 @@
 import React from 'react';
 import Resort from './Resort';
+import "../styles/style.css";
 
 const Resorts = ({resorts}) => {
 
@@ -16,14 +17,12 @@ const listResorts = () => {
   }
 
   return (
-    <div>
-      <container>
+    <div id="center">
         <h3>Where would you like to travel?</h3>
 
         <div>
           {listResorts()}
         </div>
-      </container>
     </div>
   );
 };

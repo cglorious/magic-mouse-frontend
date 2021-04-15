@@ -1,3 +1,14 @@
+#center {
+  margin: auto;
+}
+
+/* NavBar */
+#points{
+  text-align: right;
+  padding: 40px;
+}
+
+/* Resort */
 #resort-card {
   width: 18rem;
 }
@@ -6,11 +17,8 @@
   padding: 40px;
 }
 
-#branding{
-  text-align: center;
-}
 
-#points{
-  text-align: right;
-  padding: 40px;
+/* Footer */
+#footer{
+  text-align: center;
 }
