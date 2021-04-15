@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import "../styles/style.css";
 
 const MainPage = () => {
 
@@ -7,7 +7,7 @@ const MainPage = () => {
     <div>
       <h1>Magical Memories</h1>
       <p>Keep track of your adventures and earn ounces of pixie dust points.</p>
-      <button><Link to="/resorts">Enter</Link></button>
+      <a href="/resorts" class="btn btn-primary">Enter</a>
     </div>
   );
 };

@@ -4,6 +4,18 @@ import Resort from './Resort';
 const Resorts = ({resorts}) => {
 
 //function - iterate through data and create Resort components
+//class component
+const listResorts = () => {
+    return resorts.map(resort =>
+      <Resort
+        key={resort.id}
+        slug={resort.slug}
+        src={resort.image}
+        name={resort.name}
+        location={resort.location}
+        />
+    )
+  }
 
   return (
     <div className="App">
