@@ -3,14 +3,12 @@ import Resort from './Resort';
 
 const Resorts = ({resorts}) => {
 
-//function - iterate through data and create Resort components
-//class component
 const listResorts = () => {
     return resorts.map(resort =>
       <Resort
         key={resort.id}
         slug={resort.slug}
-        src={resort.image}
+        image={resort.image}
         name={resort.name}
         location={resort.location}
         />
@@ -19,7 +17,13 @@ const listResorts = () => {
 
   return (
     <div className="App">
+
       <h3>Where would you like to travel?</h3>
+
+      <div>
+        {listResorts()}
+      </div>
+
       <Resort
         slug="/disneyland-resort"
         key="1"

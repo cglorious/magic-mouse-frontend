@@ -1,11 +1,11 @@
 import React from "react";
-// import '../index.css'
+import '../styles/style.css'
 
 const Footer = () => {
 
   return (
-    <div className="branding">
-      <small className="small">&copy; 2021 <strong>Magical Memories</strong></small>
+    <div id="branding">
+        <small className="small">&copy; 2021 <strong>Magical Memories</strong></small>
     </div>
   );
 };

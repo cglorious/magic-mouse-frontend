@@ -9,7 +9,7 @@ import Footer from "./components/Footer"
 import MainPage from "./components/MainPage"
 import NotFoundPage from "./pages/404";
 //resorts
-import Resorts from "./components/Resorts";
+import ResortsContainer from "./containers/ResortsContainer";
 import DisneylandResort from "./pages/resorts/disneyland-resort";
 import DisneyworldResort from "./pages/resorts/disneyworld-resort";
 import TokyoDisneyResort from "./pages/resorts/tokyo-disney-resort";
@@ -29,7 +29,7 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path='/' render={() => <MainPage />} />
-            <Route exact path='/resorts' render={() => <Resorts />} />
+            <Route exact path='/resorts' render={() => <ResortsContainer />} />
             <Route exact path='/disneyland-resort' render={() => <DisneylandResort />} />
             <Route exact path='/disneyworld-resort' render={() => <DisneyworldResort />} />
             <Route exact path='/tokyo-disney-resort' render={() => <TokyoDisneyResort />} />

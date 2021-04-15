@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchResorts } from '../actions/fetchResorts'
-import Resorts from '../pages/resorts/resorts';
+import Resorts from '../components/Resorts';
 
 class ResortsContainer extends Component {
 
@@ -18,6 +18,6 @@ class ResortsContainer extends Component {
   }
 }
 
-const mapStateToProps = state => ({resorts: state.resorts})
+const mapStateToProps = state => ({resorts: state.resorts.list})
 
 export default connect(mapStateToProps, { fetchResorts })(ResortsContainer);

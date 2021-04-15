@@ -1,3 +1,12 @@
 #resort-card {
   width: 18rem;
 }
+
+#branding{
+  text-align: center;
+}
+
+#points{
+  text-align: right;
+  padding: 40px;
+}
