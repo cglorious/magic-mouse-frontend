@@ -4,17 +4,20 @@ import Resort from './Resort';
 
 const Resorts = ({resorts}) => {
 
-const listResorts = () => {
-    return resorts.map(resort =>
-      <Resort
-        key={resort.id}
-        slug={resort.attributes.slug}
-        image={resort.attributes.image_url}
-        name={resort.attributes.name}
-        location={resort.attributes.location}
-        />
-    )
-  }
+  //add parks
+
+  const listResorts = () => {
+      return resorts.map(resort =>
+        <Resort
+          key={resort.id}
+          slug={resort.attributes.slug}
+          image={resort.attributes.image_url}
+          name={resort.attributes.name}
+          location={resort.attributes.location}
+          parks={resort.attributes.parks}
+          />
+      )
+    }
 
   return (
     <div id="center">
