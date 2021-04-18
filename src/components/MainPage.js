@@ -7,7 +7,7 @@ const MainPage = () => {
     <div>
 
       <div class="px-4 py-5 my-5 text-center">
-        <h1>Magical Memories</h1>
+        <h1>Magic Mouse</h1>
         <img
           id="main-image"
           className="d-block mx-auto mb-4"
