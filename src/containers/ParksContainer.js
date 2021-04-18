@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchParks } from '../actions/fetchParks'
-// import Parks from '../components/Parks';
+import Parks from '../components/Parks';
 
 class ParksContainer extends Component {
 
@@ -13,7 +13,7 @@ class ParksContainer extends Component {
     return (
       <div className="App">
       Parks
-        // <Parks parks={this.props.parks}/>
+        <Parks parks={this.props.parks}/>
       </div>
     );
   }
