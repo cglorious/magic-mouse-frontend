@@ -1,6 +1,6 @@
 import React from 'react';
 import Resort from './Resort';
-import "../styles/style.css";
+// import ".../styles/style.css";
 
 const Resorts = ({resorts}) => {
 

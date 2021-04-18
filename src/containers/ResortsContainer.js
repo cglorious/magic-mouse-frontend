@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchResorts } from '../actions/fetchResorts'
-import Resorts from '../components/Resorts';
+import Resorts from '../components/resorts/Resorts';
 
 class ResortsContainer extends Component {
 
