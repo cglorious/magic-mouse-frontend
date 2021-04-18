@@ -1,5 +1,5 @@
-import resortsReducer from './resortsReducer';
 import { combineReducers } from "redux";
+import resortsReducer from './resortsReducer';
 
 const rootReducer = combineReducers({
   resorts: resortsReducer
