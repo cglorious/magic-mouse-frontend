@@ -18,7 +18,7 @@ const Resort = props => {
           <div className="card-body">
             <h5 class="card-title">{props.name}</h5>
             <p className="card-text">{props.location}</p>
-            <a href="/parks" class="btn btn-primary">Visit</a>
+            <a href={props.slug} class="btn btn-primary">Visit</a>
           </div>
         </div>
       </div>

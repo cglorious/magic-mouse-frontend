@@ -7,12 +7,12 @@ const Parks = ({parks}) => {
   //list only parks that belong to resort
 
   const listParks = () => {
-      return parks.map(resort =>
+      return parks.map(park =>
         <Park
-          key={resort.id}
-          slug={resort.attributes.slug}
-          image={resort.attributes.image_url}
-          name={resort.attributes.name}
+          key={park.id}
+          slug={park.attributes.slug}
+          image={park.attributes.image_url}
+          name={park.attributes.name}
           />
       )
     }
