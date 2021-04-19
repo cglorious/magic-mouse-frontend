@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-// import ".../styles/style.css";
+import "../styles/style.css";
 
 const Park = props => {
 
@@ -9,6 +9,7 @@ const Park = props => {
         <div id="card-container">
         <div className="card" id="resort-card">
           <img
+            id="park-card-image"
             className="card-img-top"
             src={props.image}
             alt={props.name}

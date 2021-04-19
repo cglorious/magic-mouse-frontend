@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchParks } from '../actions/fetchParks'
-import Parks from '../components/parks/Parks';
+import Parks from '../components/Parks';
 
 class ParksContainer extends Component {
 
