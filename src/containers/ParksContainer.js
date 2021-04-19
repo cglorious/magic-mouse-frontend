@@ -12,7 +12,9 @@ class ParksContainer extends Component {
   render() {
     return (
       <div className="App">
-        <Parks parks={this.props.parks}/>
+        <Parks
+          parks={this.props.parks}
+          />
       </div>
     );
   }
