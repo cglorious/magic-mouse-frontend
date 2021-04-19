@@ -1,6 +1,6 @@
 import React from 'react';
 import Park from './Park';
-// import "../styles/style.css";
+import "../styles/style.css";
 
 const Parks = ({parks}) => {
 
@@ -18,10 +18,12 @@ const Parks = ({parks}) => {
     }
 
   return (
-    <div id="center">
-        <div>
-          <h3>Choose a theme park.</h3>
-          {listParks()}
+    <div>
+        <div id="parks">
+          <h3 id="parks-header">Choose a theme park.</h3>
+          <div className="row row-cols-1 row-cols-md-3 g-4">
+            {listParks()}
+          </div>
         </div>
     </div>
   );
