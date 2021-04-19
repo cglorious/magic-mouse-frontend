@@ -1,10 +1,16 @@
-#center {
-  margin: auto;
-}
-
 /* NavBar */
 #points{
   text-align: right;
+}
+
+/* Resorts */
+#resorts{
+  padding: 50px;
+  margin: auto;
+}
+
+#resorts-header{
+  text-align: center;
 }
 
 /* Resort */
