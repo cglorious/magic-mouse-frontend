@@ -4,7 +4,12 @@ import { Link } from "react-router-dom";
 
 const Resort = props => {
 
-  // console.log(props.parks)
+  const listParks = () => {
+    const array = props.parks
+    for (let i = 0; i < array.length; i++) {
+      console.log(array[i].id)
+    }
+  }
 
     return(
       <div>
@@ -19,6 +24,7 @@ const Resort = props => {
             <h5 class="card-title">{props.name}</h5>
             <p className="card-text">{props.location}</p>
             <a href={props.slug} class="btn btn-primary">Visit</a>
+            {listParks()}
           </div>
         </div>
       </div>
