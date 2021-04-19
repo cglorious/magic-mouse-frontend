@@ -25,7 +25,9 @@ const Resorts = ({resorts}) => {
         <h3 id="resorts-header">Where would you like to travel?</h3>
 
         <div>
+          <div className="row row-cols-1 row-cols-md-3 g-4">
           {listResorts()}
+        </div>
         </div>
       </div>
     </div>
