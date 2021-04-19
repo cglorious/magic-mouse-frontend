@@ -1,0 +1,9 @@
+/* Disneyland */
+#disneyland-container{
+  padding: 50px;
+  margin: auto;
+}
+
+#disneyland-header, #card-body{
+  text-align: center;
+}
