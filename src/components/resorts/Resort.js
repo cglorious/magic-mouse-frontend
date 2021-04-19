@@ -28,7 +28,6 @@ const Resort = props => {
             <button
               href={props.slug}
               className="btn btn-primary"
-              onClick={listParks()}
               >Visit</button>
           </div>
         </div>
