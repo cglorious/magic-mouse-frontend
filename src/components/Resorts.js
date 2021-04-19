@@ -21,8 +21,8 @@ const Resorts = ({resorts}) => {
 
   return (
     <div>
-      <div id="resorts">
-        <h3 id="resorts-header">Where would you like to travel?</h3>
+      <div className="page-container">
+        <h3 className="header">Where would you like to travel?</h3>
 
         <div>
           <div className="row row-cols-1 row-cols-md-3 g-4">

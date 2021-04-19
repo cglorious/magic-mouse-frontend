@@ -19,8 +19,8 @@ const Parks = ({parks}) => {
 
   return (
     <div>
-        <div id="parks">
-          <h3 id="parks-header">Choose a theme park.</h3>
+        <div className="page-container">
+          <h3 className="header">Disney Theme Parks</h3>
           <div className="row row-cols-1 row-cols-md-3 g-4">
             {listParks()}
           </div>

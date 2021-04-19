@@ -3,13 +3,14 @@
   text-align: right;
 }
 
-/* Resorts */
-#resorts{
+.page-container{
   padding: 50px;
   margin: auto;
 }
 
-#resorts-header{
+/* Resorts */
+
+.header{
   text-align: center;
 }
 
@@ -23,15 +24,6 @@
 }
 
 /* Park */
-#parks{
-  padding: 50px;
-  margin: auto;
-}
-
-#parks-header{
-  text-align: center;
-}
-
 #park-card-image{
   height: 125px;
   width: 100%
