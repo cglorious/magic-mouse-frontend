@@ -2,7 +2,7 @@ import React from 'react';
 import Resort from './Resort';
 import "../styles/style.css";
 
-const Resorts = ({resorts}) => {
+const Resorts = ({resorts, findParks }) => {
 
   //add parks
 
@@ -14,7 +14,7 @@ const Resorts = ({resorts}) => {
           image={resort.attributes.image_url}
           name={resort.attributes.name}
           location={resort.attributes.location}
-          parks={resort.attributes.parks}
+          findParks={findParks}
           />
       )
     }
