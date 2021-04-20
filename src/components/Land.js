@@ -4,6 +4,16 @@ import "../styles/style.css";
 
 const Land = props => {
 
+  // const listAttractions = () => {
+  //   const array = props.attractions
+  //   let text = "";
+  //
+  //   for (let i = 0; i < array.length; i++) {
+  //     text += array[i].name + " ";
+  //     console.log(array[i].name)
+  //   }
+  // }
+
     return(
       <div>
         <div id="card-container">
@@ -15,9 +25,8 @@ const Land = props => {
             alt={props.name}
             />
           <div className="card-body">
-            <h5 class="card-title">{props.name}</h5>
+            <h5 class="card-title"><a href={props.slug}>{props.name}</a></h5>
             <p>{props.description}</p>
-            <a href={props.slug} class="btn btn-primary">Visit</a>
           </div>
         </div>
       </div>

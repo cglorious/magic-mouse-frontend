@@ -12,6 +12,7 @@ const Lands = ({lands}) => {
           image={land.attributes.image_url}
           name={land.attributes.name}
           description={land.attributes.description}
+          attractions={land.attributes.attractions}
           />
       )
     }

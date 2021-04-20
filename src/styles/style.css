@@ -15,7 +15,7 @@
 }
 
 /* Resort */
-#resort-card {
+#resort-card, #land-card {
   width: 18rem;
 }
 #resort-card-image {
