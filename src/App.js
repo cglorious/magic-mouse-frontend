@@ -8,9 +8,11 @@ import Footer from "./components/Footer"
 //pages
 import MainPage from "./components/MainPage"
 import NotFoundPage from "./components/NotFoundPage";
-//resorts
+
+//container
 import ResortsContainer from "./containers/ResortsContainer";
 import ParksContainer from "./containers/ParksContainer";
+import LandsContainer from "./containers/LandsContainer";
 
 import DisneylandResort from "./components/resorts/DisneylandResort";
 import DisneyworldResort from "./components/resorts/DisneyworldResort";
@@ -33,6 +35,7 @@ class App extends Component {
             <Route exact path='/' render={() => <MainPage />} />
             <Route exact path='/resorts' render={() => <ResortsContainer />} />
             <Route exact path='/parks' render={() => <ParksContainer />} />
+            <Route exact path='/lands' render={() => <LandsContainer />} />
 
             <Route exact path='/disneyland-resort' render={() => <DisneylandResort />} />
             <Route exact path='/disneyworld-resort' render={() => <DisneyworldResort />} />
