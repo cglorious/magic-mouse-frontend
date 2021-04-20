@@ -22,7 +22,7 @@ const Resorts = ({resorts, findParks }) => {
   return (
     <div>
       <div className="page-container">
-        <h3 className="header">Where would you like to travel?</h3>
+        <h3 className="header">Disney Resorts</h3>
 
         <div>
           <div className="row row-cols-1 row-cols-md-3 g-4">

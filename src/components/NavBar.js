@@ -14,12 +14,6 @@ const NavBar = () => {
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" href="/resorts">Resorts</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/parks">Parks</a>
-              </li>
-              <li className="nav-item">
                 <a className="nav-link" href="/lands">Lands</a>
               </li>
               <li className="nav-item">
