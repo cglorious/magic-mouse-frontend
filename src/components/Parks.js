@@ -4,8 +4,6 @@ import "../styles/style.css";
 
 const Parks = ({parks}) => {
 
-  //list only parks that belong to resort
-
   const listParks = () => {
       return parks.map(park =>
         <Park
