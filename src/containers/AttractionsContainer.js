@@ -20,6 +20,6 @@ class AttractionsContainer extends Component {
   }
 }
 
-const mapStateToProps = state => ({attractions: state.attractions.list})
+const mapStateToProps = state => ({attractions: state.attractions.list, count: state.attractions.count})
 
 export default connect(mapStateToProps, { fetchAttractions })(AttractionsContainer);
