@@ -24,7 +24,7 @@ import CaAdventure from "./pages/parks/ca-adventure";
 import Disneyland from "./pages/parks/disneyland";
 //lands
 import Fantasyland from "./pages/lands/fantasyland";
-import StarWars from "./pages/lands/star-wars";
+import StarWars from "./pages/star-wars";
 
 class App extends Component {
 
