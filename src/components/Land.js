@@ -4,15 +4,15 @@ import "../styles/style.css";
 
 const Land = props => {
 
-  // const listAttractions = () => {
+  // const myAttractions = () => {
   //   const array = props.attractions
   //   let text = "";
   //
   //   for (let i = 0; i < array.length; i++) {
   //     text += array[i].name + " ";
   //     console.log(array[i].name)
+  //     }
   //   }
-  // }
 
     return(
       <div>
@@ -25,13 +25,17 @@ const Land = props => {
             alt={props.name}
             />
           <div className="card-body">
-            <h5 class="card-title"><a href={props.slug}>{props.name}</a></h5>
+            <h5 className="card-title">
+              <a href={props.slug}>{props.name}</a>
+            </h5>
             <p>{props.description}</p>
           </div>
         </div>
       </div>
     </div>
     );
+
+  // onClick={findAttractions}
 };
 
 export default Land;

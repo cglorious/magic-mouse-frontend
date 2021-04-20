@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchResorts } from '../actions/fetchResorts'
-import { findParks } from '../actions/findParks'
+// import { findParks } from '../actions/findParks'
 import Resorts from '../components/Resorts';
 
 class ResortsContainer extends Component {
@@ -13,7 +13,7 @@ class ResortsContainer extends Component {
   render() {
     return (
       <div className="App">
-        <Resorts resorts={this.props.resorts} findParks={findParks}/>
+        <Resorts resorts={this.props.resorts}/>
       </div>
     );
   }
@@ -21,4 +21,4 @@ class ResortsContainer extends Component {
 
 const mapStateToProps = state => ({resorts: state.resorts.list})
 
-export default connect(mapStateToProps, { fetchResorts, findParks })(ResortsContainer);
+export default connect(mapStateToProps, { fetchResorts })(ResortsContainer);

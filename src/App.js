@@ -23,7 +23,7 @@ import TokyoDisneyResort from "./components/resorts/TokyoDisneyResort";
 import CaAdventure from "./pages/parks/ca-adventure";
 import Disneyland from "./pages/parks/disneyland";
 //lands
-import Fantasyland from "./pages/lands/fantasyland";
+import Fantasyland from "./pages/fantasyland";
 import StarWars from "./pages/star-wars";
 
 class App extends Component {

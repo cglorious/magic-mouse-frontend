@@ -6,6 +6,7 @@ const Attractions = ({attractions}) => {
 
   const listAttractions = () => {
       return attractions.map(attraction =>
+        //if attraction.attributes.land_id === landId
         <Attraction
           key={attraction.id}
           slug={attraction.attributes.slug}

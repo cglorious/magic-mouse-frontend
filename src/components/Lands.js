@@ -4,6 +4,8 @@ import "../styles/style.css";
 
 const Lands = ({lands}) => {
 
+// {findAttractions}
+
   const listLands = () => {
       return lands.map(land =>
         <Land
@@ -16,6 +18,8 @@ const Lands = ({lands}) => {
           />
       )
     }
+
+    // findAttractions={findAttractions}
 
   return (
     <div>

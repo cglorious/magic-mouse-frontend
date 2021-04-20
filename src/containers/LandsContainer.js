@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchLands } from '../actions/fetchLands'
 import Lands from '../components/Lands';
+// import {findAttractions} from from '../actions/findAttractions'
 
 class LandsContainer extends Component {
 
@@ -21,5 +22,8 @@ class LandsContainer extends Component {
 }
 
 const mapStateToProps = state => ({lands: state.lands.list})
+
+// findAttractions = {findAttractions}
+// {findAttractions}
 
 export default connect(mapStateToProps, { fetchLands })(LandsContainer);
