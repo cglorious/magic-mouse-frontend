@@ -13,7 +13,9 @@ import NotFoundPage from "./components/NotFoundPage";
 import ResortsContainer from "./containers/ResortsContainer";
 import ParksContainer from "./containers/ParksContainer";
 import LandsContainer from "./containers/LandsContainer";
+import AttractionsContainer from "./containers/AttractionsContainer";
 
+//resorts
 import DisneylandResort from "./components/resorts/DisneylandResort";
 import DisneyworldResort from "./components/resorts/DisneyworldResort";
 import TokyoDisneyResort from "./components/resorts/TokyoDisneyResort";
@@ -36,6 +38,7 @@ class App extends Component {
             <Route exact path='/resorts' render={() => <ResortsContainer />} />
             <Route exact path='/parks' render={() => <ParksContainer />} />
             <Route exact path='/lands' render={() => <LandsContainer />} />
+            <Route exact path='/attractions' render={() => <AttractionsContainer />} />
 
             <Route exact path='/disneyland-resort' render={() => <DisneylandResort />} />
             <Route exact path='/disneyworld-resort' render={() => <DisneyworldResort />} />
