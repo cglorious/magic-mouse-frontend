@@ -9,7 +9,7 @@ const Attraction = props => {
         <div id="card-container">
         <div className="card" id="resort-card">
           <img
-            id="park-card-image"
+            id="attraction-card-image"
             className="card-img-top"
             src={props.image}
             alt={props.name}
@@ -17,9 +17,7 @@ const Attraction = props => {
           <div className="card-body">
             <h5 class="card-title">{props.name}</h5>
             <p>Closed: {props.closure}</p>
-            <button class="btn btn-primary">+</button>
-            0
-            <button class="btn btn-primary">-</button>
+            <button class="btn btn-primary">+</button>  0  <button class="btn btn-primary">-</button>
           </div>
         </div>
       </div>

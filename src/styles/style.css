@@ -33,6 +33,11 @@
   padding: 40px;
 }
 
+/* Attraction */
+#attraction-card-image{
+  height: 175px;
+  width: 100%
+}
 
 /* Footer */
 #footer{
