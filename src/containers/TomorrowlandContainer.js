@@ -12,7 +12,7 @@ class TomorrowlandContainer extends Component {
   render() {
     return (
       <div>
-        Container
+        TomorrowlandContainer
       </div>
     );
   }

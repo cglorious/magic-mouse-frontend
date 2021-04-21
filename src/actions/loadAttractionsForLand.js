@@ -94,7 +94,7 @@ export const fetchMickeysToonTown= () => {
   }
 }
 
-export const fetchNOLA= () => {
+export const fetchNola= () => {
   return(dispatch) => {
     fetch(`http://localhost:3000/api/v1/lands/9`)
     .then(resp => resp.json())
