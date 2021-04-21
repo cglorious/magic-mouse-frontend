@@ -10,6 +10,7 @@ import frontierlandReducer from './frontierlandReducer';
 import mainstreetUSAReducer from './mainstreetUSAReducer';
 import mickeysToontownReducer from './mickeysToontownReducer';
 import nolaReducer from './nolaReducer';
+import counterReducer from './counterReducer';
 
 const rootReducer = combineReducers({
   lands: landsReducer,
@@ -22,7 +23,8 @@ const rootReducer = combineReducers({
   frontierland: frontierlandReducer,
   mainstreetUSA: mainstreetUSAReducer,
   mickeysToontown: mickeysToontownReducer,
-  nola: nolaReducer
+  nola: nolaReducer,
+  counter: counterReducer
 });
 
 export default rootReducer;
