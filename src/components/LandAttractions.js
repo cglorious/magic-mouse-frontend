@@ -8,6 +8,7 @@ const LandAttractions = ({landAttractions, loadAttractionsForLand}) => {
       return landAttractions.map(attraction =>
         <LandAttractionCard
           key={attraction.id}
+          id={attraction.id}
           image={attraction.attributes.image_url}
           name={attraction.attributes.name}
           description={attraction.attributes.description}

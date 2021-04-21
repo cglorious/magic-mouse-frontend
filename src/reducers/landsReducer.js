@@ -1,4 +1,4 @@
-const landsReducer = (state = {list: [] }, action) => {
+const landsReducer = (state = {list: []}, action) => {
   switch(action.type) {
     case 'FETCH_LANDS':
       return {list: action.payload }

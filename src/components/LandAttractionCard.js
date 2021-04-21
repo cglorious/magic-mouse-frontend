@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import "../styles/style.css";
 
-const LandAttractionCard = ({ key, image, name, description, loadAttractionsForLand}) => {
+const LandAttractionCard = ({ id, image, name, description, loadAttractionsForLand}) => {
 
     return(
       <div>
@@ -18,11 +18,10 @@ const LandAttractionCard = ({ key, image, name, description, loadAttractionsForL
             <h5 className="card-title">
               <button
               className="btn btn-primary"
-              onClick={() =>
-                loadAttractionsForLand(key)
-
-              }
-              >
+              onClick={() => {
+                loadAttractionsForLand({id})
+                console.log(`You clicked ${name}.`)
+              }}>
               {name}
               </button>
             </h5>

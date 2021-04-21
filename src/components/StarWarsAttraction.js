@@ -1,20 +1,21 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import "../styles/style.css";
 
-const LandAttraction = props => {
+const StarWarsAttraction = ({image, name, closure}) => {
 
-    return (
+    return(
       <div>
         <div id="card-container">
         <div className="card" id="resort-card">
           <img
-            id="park-card-image"
+            id="attraction-card-image"
             className="card-img-top"
-            src={props.image}
-            alt={props.name}
+            src={image}
+            alt={name}
             />
           <div className="card-body">
-            <h5 className="card-title">{props.name}</h5>
+            <h5 class="card-title">{name}</h5>
             <button class="btn btn-primary">+</button>  0  <button class="btn btn-primary">-</button>
           </div>
         </div>
@@ -23,4 +24,4 @@ const LandAttraction = props => {
     );
 };
 
-export default LandAttraction;
+export default StarWarsAttraction;

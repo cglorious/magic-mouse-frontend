@@ -18,7 +18,7 @@ import LandAttractionsContainer from "./containers/LandAttractionsContainer";
 
 //lands
 import Fantasyland from "./components/fantasyland";
-import StarWars from "./components/star-wars";
+import StarWarsContainer from "./containers/StarWarsContainer";
 
 class App extends Component {
 
@@ -31,9 +31,10 @@ class App extends Component {
             <Route exact path='/' render={() => <MainPage />} />
             <Route exact path='/lands' render={() => <LandsContainer />} />
             <Route exact path='/attractions' render={() => <AttractionsContainer />} />
+            <Route exact path='/lands/star-wars' render={() => <StarWarsContainer />} />
+
             <Route exact path='/lands/attractions' render={() => <LandAttractionsContainer />} />
             <Route exact path='/fantasyland' render={() => <Fantasyland />} />
-            <Route exact path='/star-wars' render={() => <StarWars />} />
             <Route exact path='/404' render={() => <NotFoundPage />} />
             <Redirect to='/404' />
             </Switch>
