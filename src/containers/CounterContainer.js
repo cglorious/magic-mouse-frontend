@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { countAttractions } from '../actions/countAttractions'
-// import Lands from '../components/Lands';
+import { increment, decrement } from '../actions/count'
+import Counter from '../components/Counter'
 
 class CounterContainer extends Component {
-
-  componentDidMount() {
-    this.props.countAttractions()
-  }
 
   render() {
     return (
       <div>
-        CounterContainer
+        <Counter counter={this.props.counter} increment={increment} decrement={decrement}/>
       </div>
     );
   }
@@ -20,4 +16,4 @@ class CounterContainer extends Component {
 
 const mapStateToProps = state => ({counter: state.counter.count})
 
-export default connect(mapStateToProps, { countAttractions })(CounterContainer);
+export default connect(mapStateToProps, { increment, decrement })(CounterContainer);
