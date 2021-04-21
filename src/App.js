@@ -9,15 +9,12 @@ import Footer from "./components/Footer"
 import MainPage from "./components/MainPage"
 import NotFoundPage from "./components/NotFoundPage";
 
-//container
+//view all
 import LandsContainer from "./containers/LandsContainer";
 import AttractionsContainer from "./containers/AttractionsContainer";
 
-//dynamic routes
-import LandAttractionsContainer from "./containers/LandAttractionsContainer";
-
-//lands
-import Fantasyland from "./components/fantasyland";
+//attractions by land
+import FantasylandContainer from "./components/FantasylandContainer";
 import StarWarsContainer from "./containers/StarWarsContainer";
 
 class App extends Component {
@@ -32,9 +29,7 @@ class App extends Component {
             <Route exact path='/lands' render={() => <LandsContainer />} />
             <Route exact path='/attractions' render={() => <AttractionsContainer />} />
             <Route exact path='/lands/star-wars' render={() => <StarWarsContainer />} />
-
-            <Route exact path='/lands/attractions' render={() => <LandAttractionsContainer />} />
-            <Route exact path='/fantasyland' render={() => <Fantasyland />} />
+            <Route exact path='/lands/fantasyland' render={() => <FantasylandContainer />} />
             <Route exact path='/404' render={() => <NotFoundPage />} />
             <Redirect to='/404' />
             </Switch>

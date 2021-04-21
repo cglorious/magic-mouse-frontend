@@ -1,8 +1,4 @@
-const attractionsReducer = (state = {
-  list: [],
-  // {attraction_id: attractions}
-  count: 0
-}, action) => {
+const attractionsReducer = (state = {list: []}, action) => {
   switch(action.type) {
     case 'FETCH_ATTRACTIONS':
       return { list: action.payload, count: 0 }

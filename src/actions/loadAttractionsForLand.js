@@ -1,11 +1,11 @@
-export const loadAttractionsForLand = landId => {
+export const fetchStarWars = () => {
   return(dispatch) => {
-    fetch(`http://localhost:3000/api/v1/lands/${landId}`)
+    fetch(`http://localhost:3000/api/v1/lands/1`)
     .then(resp => resp.json())
-    .then(lands => {
+    .then(land => {
       dispatch({
-        type: 'LOAD_ATTRACTIONS_FOR_LAND',
-        payload: lands.data.attributes.attractions})
+        type: 'LOAD_ATTRACTIONS_FOR_STARWARS',
+        payload: land.data.attributes.attractions})
     })
   }
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchStarWars } from '../actions/fetchStarWars'
+import { fetchStarWars } from '../actions/loadAttractionsForLand'
 import StarWars from '../components/StarWars';
 
 class StarWarsContainer extends Component {
