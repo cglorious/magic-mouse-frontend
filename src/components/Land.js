@@ -5,10 +5,13 @@ import "../styles/style.css";
 const Land = ({id, slug, image, name, description}) => {
 
   const handleClick = () => {
-    if (id === "1") {
-      return '/lands/star-wars'
-    } else {
-      return '/'
+    switch (id) {
+      case "1":
+        return '/lands/star-wars'
+      case "2":
+        return '/lands/fantasyland'
+      default:
+        return '/attractions'
     }
   }
 

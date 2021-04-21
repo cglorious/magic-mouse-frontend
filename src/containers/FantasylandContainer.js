@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchFantasyland } from '../actions/fetchFantasyland'
+import { fetchFantasyland } from '../actions/loadAttractionsForLand'
 import Fantasyland from '../components/Fantasyland';
 
 class FantasylandContainer extends Component {

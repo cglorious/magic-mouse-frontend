@@ -14,7 +14,7 @@ import LandsContainer from "./containers/LandsContainer";
 import AttractionsContainer from "./containers/AttractionsContainer";
 
 //attractions by land
-import FantasylandContainer from "./components/FantasylandContainer";
+import FantasylandContainer from "./containers/FantasylandContainer";
 import StarWarsContainer from "./containers/StarWarsContainer";
 
 class App extends Component {
