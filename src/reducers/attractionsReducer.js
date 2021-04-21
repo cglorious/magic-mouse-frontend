@@ -1,5 +1,6 @@
 const attractionsReducer = (state = {
   list: [],
+  // {attraction_id: attractions}
   count: 0
 }, action) => {
   switch(action.type) {

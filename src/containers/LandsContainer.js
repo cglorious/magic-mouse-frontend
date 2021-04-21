@@ -24,6 +24,7 @@ class LandsContainer extends Component {
 const mapStateToProps = state => ({lands: state.lands.list})
 
 // findAttractions = {findAttractions}
+// attractions: state.lands.attractions
 // {findAttractions}
 
 export default connect(mapStateToProps, { fetchLands })(LandsContainer);

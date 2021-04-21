@@ -26,7 +26,7 @@ const Land = props => {
             />
           <div className="card-body">
             <h5 className="card-title">
-              <a href={props.slug}>{props.name}</a>
+              <Link to="/lands/attractions">{props.name}</Link>
             </h5>
             <p>{props.description}</p>
           </div>
