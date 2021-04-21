@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { fetchLands } from '../actions/fetchLands'
 import { loadAttractionsForLand } from '../actions/loadAttractionsForLand'
 import LandAttractions from '../components/LandAttractions';
 
 class LandAttractionsContainer extends Component {
 
   componentDidMount() {
-    this.props.loadAttractionsForLand()
+    this.props.fetchLands()
   }
 
   render() {
@@ -14,6 +15,7 @@ class LandAttractionsContainer extends Component {
       <div className="App">
         <LandAttractions
           landAttractions={this.props.landAttractions}
+          loadAttractionsForLand={loadAttractionsForLand}
           />
       </div>
     );
@@ -22,4 +24,4 @@ class LandAttractionsContainer extends Component {
 
 const mapStateToProps = state => ({landAttractions: state.landAttractions.list})
 
-export default connect(mapStateToProps, { loadAttractionsForLand })(LandAttractionsContainer);
+export default connect(mapStateToProps, { fetchLands, loadAttractionsForLand })(LandAttractionsContainer);

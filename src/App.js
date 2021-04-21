@@ -10,22 +10,15 @@ import MainPage from "./components/MainPage"
 import NotFoundPage from "./components/NotFoundPage";
 
 //container
-import ResortsContainer from "./containers/ResortsContainer";
-import ParksContainer from "./containers/ParksContainer";
 import LandsContainer from "./containers/LandsContainer";
-import LandAttractionsContainer from "./containers/LandAttractionsContainer";
 import AttractionsContainer from "./containers/AttractionsContainer";
 
-//resorts
-import DisneylandResort from "./components/resorts/DisneylandResort";
-import DisneyworldResort from "./components/resorts/DisneyworldResort";
-import TokyoDisneyResort from "./components/resorts/TokyoDisneyResort";
-//parks
-import CaAdventure from "./pages/parks/ca-adventure";
-import Disneyland from "./pages/parks/disneyland";
+//dynamic routes
+import LandAttractionsContainer from "./containers/LandAttractionsContainer";
+
 //lands
-import Fantasyland from "./pages/fantasyland";
-import StarWars from "./pages/star-wars";
+import Fantasyland from "./components/fantasyland";
+import StarWars from "./components/star-wars";
 
 class App extends Component {
 
@@ -36,17 +29,9 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path='/' render={() => <MainPage />} />
-            <Route exact path='/resorts' render={() => <ResortsContainer />} />
-            <Route exact path='/parks' render={() => <ParksContainer />} />
             <Route exact path='/lands' render={() => <LandsContainer />} />
-            <Route exact path='/lands/attractions' render={() => <LandAttractionsContainer />} />
             <Route exact path='/attractions' render={() => <AttractionsContainer />} />
-
-            <Route exact path='/disneyland-resort' render={() => <DisneylandResort />} />
-            <Route exact path='/disneyworld-resort' render={() => <DisneyworldResort />} />
-            <Route exact path='/tokyo-disney-resort' render={() => <TokyoDisneyResort />} />
-            <Route exact path='/ca-adventure' render={() => <CaAdventure />} />
-            <Route exact path='/disneyland' render={() => <Disneyland />} />
+            <Route exact path='/lands/attractions' render={() => <LandAttractionsContainer />} />
             <Route exact path='/fantasyland' render={() => <Fantasyland />} />
             <Route exact path='/star-wars' render={() => <StarWars />} />
             <Route exact path='/404' render={() => <NotFoundPage />} />

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import "../styles/style.css";
 
-const Land = props => {
+const LandAttractionCard = ({ key, image, name, description, loadAttractionsForLand}) => {
 
     return(
       <div>
@@ -11,14 +11,22 @@ const Land = props => {
           <img
             id="park-card-image"
             className="card-img-top"
-            src={props.image}
-            alt={props.name}
+            src={image}
+            alt={name}
             />
           <div className="card-body">
             <h5 className="card-title">
-              <Link to="/lands/attractions">{props.name}</Link>
+              <button
+              className="btn btn-primary"
+              onClick={() =>
+                loadAttractionsForLand(key)
+
+              }
+              >
+              {name}
+              </button>
             </h5>
-            <p>{props.description}</p>
+            <p>{description}</p>
           </div>
         </div>
       </div>
@@ -27,4 +35,4 @@ const Land = props => {
 
 };
 
-export default Land;
+export default LandAttractionCard;

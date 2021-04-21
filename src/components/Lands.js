@@ -4,7 +4,7 @@ import "../styles/style.css";
 
 const Lands = ({lands}) => {
 
-// {findAttractions}
+  // {loadAttractionsForLand}
 
   const listLands = () => {
       return lands.map(land =>

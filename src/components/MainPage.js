@@ -17,7 +17,7 @@ const MainPage = () => {
           <p class="lead mb-4">Keep track of your Disneyland memories by <br/> counting your rides and earning points.</p>
         </div>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-          <a href="/lands" className="btn btn-primary btn-lg px-4 me-sm-3">I'm ready!</a>
+          <a href="/lands/attractions" className="btn btn-primary btn-lg px-4 me-sm-3">I'm ready!</a>
         </div>
       </div>
     </div>

@@ -1,15 +1,17 @@
 import React from 'react';
-import LandAttraction from './LandAttraction';
+import LandAttractionCard from './LandAttractionCard';
 import "../styles/style.css";
 
-const LandAttractions = ({landAttractions}) => {
+const LandAttractions = ({landAttractions, loadAttractionsForLand}) => {
 
   const listLandAttractions = () => {
       return landAttractions.map(attraction =>
-        <LandAttraction
+        <LandAttractionCard
           key={attraction.id}
           image={attraction.attributes.image_url}
           name={attraction.attributes.name}
+          description={attraction.attributes.description}
+          loadAttractionsForLand={loadAttractionsForLand}
           />
       )
     }
