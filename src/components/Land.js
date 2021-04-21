@@ -11,7 +11,7 @@ const Land = ({id, slug, image, name, description}) => {
       case "2":
         return '/lands/fantasyland'
       default:
-        return '/attractions'
+        return '/all-attractions'
     }
   }
 

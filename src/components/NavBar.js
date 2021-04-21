@@ -17,7 +17,7 @@ const NavBar = () => {
                 <a className="nav-link" href="/lands">Lands</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/attractions">Attractions</a>
+                <a className="nav-link" href="/all-attractions">Attractions</a>
               </li>
             </ul>
           </div>
