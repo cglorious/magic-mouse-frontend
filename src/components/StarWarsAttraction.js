@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import "../styles/style.css";
+import CounterContainer from '../containers/CounterContainer'
 
 const StarWarsAttraction = ({image, name, closure}) => {
 
@@ -16,7 +17,7 @@ const StarWarsAttraction = ({image, name, closure}) => {
             />
           <div className="card-body">
             <h5 class="card-title">{name}</h5>
-            <button class="btn btn-primary">+</button>  0  <button class="btn btn-primary">-</button>
+            <CounterContainer/ >
           </div>
         </div>
       </div>
