@@ -10,6 +10,20 @@ const Land = ({id, slug, image, name, description}) => {
         return '/lands/star-wars'
       case "2":
         return '/lands/fantasyland'
+      case "3":
+        return '/lands/tomorrowland'
+      case "4":
+        return '/lands/adventureland'
+      case "5":
+        return '/lands/critter-country'
+      case "6":
+        return '/lands/frontierland'
+      case "7":
+        return '/lands/mainstreet-usa'
+      case "8":
+        return '/lands/mickeys-toontown'
+      case "9":
+        return '/lands/new-orleans-square'
       default:
         return '/all-attractions'
     }
