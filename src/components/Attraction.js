@@ -16,7 +16,6 @@ const Attraction = props => {
             />
           <div className="card-body">
             <h5 class="card-title">{props.name}</h5>
-            <p>Closed: {props.closure}</p>
             <button class="btn btn-primary">+</button>  0  <button class="btn btn-primary">-</button>
           </div>
         </div>
