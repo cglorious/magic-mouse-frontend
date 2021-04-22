@@ -8,7 +8,7 @@ class CounterContainer extends Component {
   render() {
     return (
       <div>
-        <Counter counter={this.props.counter} increment={increment} decrement={decrement}/>
+        <Counter counter={this.props.counter} increment={this.props.increment} decrement={this.props.decrement}/>
       </div>
     );
   }
