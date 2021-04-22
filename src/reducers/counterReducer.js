@@ -1,17 +1,19 @@
-const counterReducer = (state = {count: 0}, action) => {
+const counterReducer = (state = [0, 0, 0], action) => {
   switch(action.type) {
     case 'INCREMENT':
-      if (state.id === action.id) {
-        return {...state, count: state.count + 1}
-      } else {
-        return state
-      }
+        return state.map((value, i) => {
+          if (action.payload.index === i) {
+            return value += 1
+          }
+          return value
+        });
     case 'DECREMENT':
-      if (state.id === action.id) {
-        return {...state, count: state.count - 1}
-      } else {
-        return state
-      }
+      return state.map((value, i) => {
+        if (action.payload.index === i) {
+          return value -= 1
+        }
+        return value
+    });
     default:
       return state;
   }

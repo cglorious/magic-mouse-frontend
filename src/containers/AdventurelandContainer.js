@@ -12,7 +12,7 @@ class AdventurelandContainer extends Component {
   render() {
     return (
       <div>
-        AdventurelandContainer
+        Adventureland
       </div>
     );
   }

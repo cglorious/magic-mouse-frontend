@@ -24,7 +24,7 @@ const rootReducer = combineReducers({
   mainstreetUSA: mainstreetUSAReducer,
   mickeysToontown: mickeysToontownReducer,
   nola: nolaReducer,
-  counter: counterReducer
+  counters: counterReducer
 });
 
 export default rootReducer;

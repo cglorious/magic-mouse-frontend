@@ -1,17 +1,13 @@
-export const increment = id => {
+export const increment = index => {
   return {
     type: 'INCREMENT',
-    id
+    payload: { index }
   }
 }
 
-export const decrement = id => {
+export const decrement = index => {
   return {
     type: 'DECREMENT',
-  id
+    payload: { index }
   }
 }
-
-export const add_counter = () => ({
-  type: "ADD_COUNTER"
-});
