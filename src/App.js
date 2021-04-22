@@ -6,7 +6,8 @@ import MainPage from "./components/MainPage"
 import NavBar from "./components/NavBar"
 import Footer from "./components/Footer"
 import NotFoundPage from "./components/NotFoundPage";
-import CounterContainer from "./containers/CounterContainer.js"
+// import CounterContainer from "./containers/CounterContainer.js"
+// <Route exact path='/counter' render={() => <CounterContainer />} />
 
 //view all
 import LandsContainer from "./containers/LandsContainer";
@@ -44,7 +45,6 @@ class App extends Component {
             <Route exact path='/lands/mainstreet-usa' render={() => <MainstreetUSAContainer />} />
             <Route exact path='/lands/mickeys-toontown' render={() => <MickeysToontownContainer />} />
             <Route exact path='/lands/new-orleans-square' render={() => <NolaContainer />} />
-            <Route exact path='/counter' render={() => <CounterContainer />} />
 
             <Route exact path='/404' render={() => <NotFoundPage />} />
             <Redirect to='/404' />

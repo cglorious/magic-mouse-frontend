@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../styles/style.css";
 import CounterContainer from '../containers/CounterContainer'
 
-const StarWarsAttraction = ({image, name, closure}) => {
+const StarWarsAttraction = ({id, image, name, closure}) => {
 
     return(
       <div>
@@ -17,7 +17,9 @@ const StarWarsAttraction = ({image, name, closure}) => {
             />
           <div className="card-body">
             <h5 class="card-title">{name}</h5>
-            <CounterContainer/ >
+            <CounterContainer
+              id={id}
+              / >
           </div>
         </div>
       </div>

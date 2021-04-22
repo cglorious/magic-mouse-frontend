@@ -5,10 +5,17 @@ import Counter from '../components/Counter'
 
 class CounterContainer extends Component {
 
+debugger
+
   render() {
     return (
       <div>
-        <Counter counter={this.props.counter} increment={this.props.increment} decrement={this.props.decrement}/>
+        <Counter
+          id={this.props.id}
+          counter={this.props.counter}
+          increment={this.props.increment}
+          decrement={this.props.decrement}
+          />
       </div>
     );
   }

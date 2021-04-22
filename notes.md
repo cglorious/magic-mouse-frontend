@@ -7,3 +7,4 @@
 - Should it persist to the backend?
 - CounterContainer is currently in StarWarsAttraction component
 - counter / starWars state is the same
+- add counter to StarWars prop?

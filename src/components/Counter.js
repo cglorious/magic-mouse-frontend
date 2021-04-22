@@ -3,7 +3,7 @@ import "../styles/style.css";
 
 const Counter = ({counter, increment, decrement}) => {
 
-  // debugger
+debugger
 
   return (
     <div className="page-container">

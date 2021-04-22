@@ -8,6 +8,7 @@ const StarWars = ({attractions}) => {
       return attractions.map(attraction =>
         <StarWarsAttraction
           key={attraction.id}
+          id={attraction.id}
           image={attraction.image_url}
           name={attraction.name}
           closure={attraction.closure}
