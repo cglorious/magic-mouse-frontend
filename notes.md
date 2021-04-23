@@ -4,6 +4,7 @@
 #### Star Wars
 [ x ] Button to component
 [ x ] Count state to reducer
+[   ] access counter value that matches entity / connect to count value
 [   ] increment to change state
 [   ] decrement to change state
 

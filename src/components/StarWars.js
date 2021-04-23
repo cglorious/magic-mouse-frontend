@@ -11,7 +11,7 @@ const StarWars = ({attractions, counter, increment, decrement}) => {
             id={attraction.id}
             image={attraction.image_url}
             name={attraction.name}
-            count={attraction.count}
+            counter={counter}
             increment={increment}
             decrement={decrement}
             />
