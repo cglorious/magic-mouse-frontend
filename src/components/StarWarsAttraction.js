@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../styles/style.css";
 import CounterContainer from '../containers/CounterContainer'
 
-const StarWarsAttraction = ({id, image, name, closure}) => {
+const StarWarsAttraction = ({id, image, name, closure, count, increment, decrement}) => {
 
     return(
       <div>
@@ -17,9 +17,12 @@ const StarWarsAttraction = ({id, image, name, closure}) => {
             />
           <div className="card-body">
             <h5 class="card-title">{name}</h5>
-            <CounterContainer
-              id={id}
-              / >
+              <div>
+                <h1>{count}</h1>
+                <p>
+                  <button className="btn btn-primary" onClick={ () => increment({id})}>+</button>    <button className="btn btn-primary" onClick={ () => decrement({id})}>-</button>
+                </p>
+              </div>
           </div>
         </div>
       </div>

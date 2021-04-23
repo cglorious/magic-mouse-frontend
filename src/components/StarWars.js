@@ -2,17 +2,20 @@ import React from 'react';
 import StarWarsAttraction from './StarWarsAttraction';
 import "../styles/style.css";
 
-const StarWars = ({attractions}) => {
+const StarWars = ({attractions, counter, increment, decrement}) => {
 
   const listStarWarsAttractions = () => {
       return attractions.map(attraction =>
-        <StarWarsAttraction
-          key={attraction.id}
-          id={attraction.id}
-          image={attraction.image_url}
-          name={attraction.name}
-          closure={attraction.closure}
-          />
+          <StarWarsAttraction
+            key={attraction.id}
+            id={attraction.id}
+            image={attraction.image_url}
+            name={attraction.name}
+            closure={attraction.closure}
+            count={attraction.count}
+            increment={attraction.increment}
+            decrement={attraction.decrement}
+            />
       )
     }
 

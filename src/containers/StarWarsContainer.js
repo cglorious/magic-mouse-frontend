@@ -26,7 +26,7 @@ class StarWarsContainer extends Component {
 
 const mapStateToProps = state => ({
   attractions: state.starWars.list,
-  counter: state.starWars.count
+  counter: state.starWars.list.count
 })
 
 export default connect(mapStateToProps, {

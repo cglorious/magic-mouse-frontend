@@ -1,13 +1,25 @@
 import React from "react";
 import "../styles/style.css";
 
-const Counter = ({counter, increment, decrement}) => {
+const Counter = ({counters, increment, decrement}) => {
 
-debugger
+  const renderCounters = () => {
+    return counters.map((value, i) => {
+      return (
+        <div>
+          <h1>{value}</h1>
+          <p>
+            <button className="btn btn-primary" onClick={ () => increment(i)}>+</button>
+            <button className="btn btn-primary" onClick={ () => decrement(i)}>-</button>
+          </p>
+        </div>
+      )
+    })
+  }
 
   return (
     <div className="page-container">
-      <button className="btn btn-primary" onClick={ () => increment()}>+</button> {counter} <button className="btn btn-primary" onClick={ () => decrement()}>-</button>
+      {renderCounters()}
     </div>
   );
 };
