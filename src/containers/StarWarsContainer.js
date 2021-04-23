@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchStarWars } from '../actions/loadAttractionsForLand'
-import StarWars from '../components/StarWars';
 import { increment, decrement } from '../actions/count'
+import StarWars from '../components/StarWars';
 
 class StarWarsContainer extends Component {
 
@@ -26,7 +26,7 @@ class StarWarsContainer extends Component {
 
 const mapStateToProps = state => ({
   attractions: state.starWars.list,
-  counter: state.starWars.list.count
+  counter: state.starWars.count
 })
 
 export default connect(mapStateToProps, {

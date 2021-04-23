@@ -12,7 +12,7 @@ const starWarsReducer = (state = {list: [], count: []}, action) => {
       return incrementList.map((attraction, id) => {
         const index = id - 1
         if (action.payload.id === attraction.id) {
-          const value = state.count[index] += 1
+          return state.count[index] += 1
         }
       })
     case 'DECREMENT':
