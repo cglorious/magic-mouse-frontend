@@ -13,7 +13,11 @@ class MickeysToontownContainer extends Component {
   render() {
     return (
       <div>
-        <MickeysToontown />
+        <MickeysToontown
+          attractions={this.props.attractions}
+          incrementMickeysToontown={this.props.incrementMickeysToontown}
+          decrementMickeysToontown={this.props.decrementMickeysToontown} 
+          />
       </div>
     );
   }
@@ -24,5 +28,5 @@ const mapStateToProps = state => ({attractions: state.mickeysToontown.list})
 export default connect(mapStateToProps, {
   fetchMickeysToonTown,
   incrementMickeysToontown,
-  decrementMickeysToontown 
+  decrementMickeysToontown
 })(MickeysToontownContainer);

@@ -13,7 +13,11 @@ class TomorrowlandContainer extends Component {
   render() {
     return (
       <div>
-        <Tomorrowland />
+        <Tomorrowland
+          attractions={this.props.attractions}
+          incrementTomorrowland={this.props.incrementTomorrowland}
+          decrementTomorrowland={this.props.decrementTomorrowland} 
+          />
       </div>
     );
   }
@@ -24,5 +28,5 @@ const mapStateToProps = state => ({attractions: state.tomorrowland.list})
 export default connect(mapStateToProps, {
   fetchTomorrowland,
   incrementTomorrowland,
-  decrementTomorrowland 
+  decrementTomorrowland
 })(TomorrowlandContainer);

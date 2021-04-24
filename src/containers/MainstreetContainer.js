@@ -13,7 +13,11 @@ class MainstreetContainer extends Component {
   render() {
     return (
       <div>
-        <Mainstreet />
+        <Mainstreet
+          attractions={this.props.attractions}
+          incrementMainstreet={this.props.incrementMainstreet}
+          decrementMainstreet={this.props.decrementMainstreet} 
+          />
       </div>
     );
   }
@@ -24,5 +28,5 @@ const mapStateToProps = state => ({attractions: state.mainstreet.list})
 export default connect(mapStateToProps, {
   fetchMainstreet,
   incrementMainstreet,
-  decrementMainstreet  
+  decrementMainstreet
 })(MainstreetContainer);

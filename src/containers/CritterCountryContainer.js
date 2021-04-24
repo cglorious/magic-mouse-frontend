@@ -13,7 +13,11 @@ class CritterCountryContainer extends Component {
   render() {
     return (
       <div>
-        <CritterCountry />
+        <CritterCountry
+          attractions={this.props.attractions}
+          incrementCritterCountry={this.props.incrementCritterCountry}
+          decrementCritterCountry={this.props.decrementCritterCountry} 
+          />
       </div>
     );
   }
@@ -24,5 +28,5 @@ const mapStateToProps = state => ({attractions: state.critterCountry.list})
 export default connect(mapStateToProps, {
   fetchCritterCountry,
   incrementCritterCountry,
-  decrementCritterCountry  
+  decrementCritterCountry
 })(CritterCountryContainer);

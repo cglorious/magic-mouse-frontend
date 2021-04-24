@@ -13,7 +13,11 @@ class AdventurelandContainer extends Component {
   render() {
     return (
       <div>
-        <Adventureland />
+        <Adventureland
+          attractions={this.props.attractions}
+          incrementAdventureland={this.props.incrementAdventureland}
+          decrementAdventureland={this.props.decrementAdventureland} 
+          />
       </div>
     );
   }
@@ -24,5 +28,5 @@ const mapStateToProps = state => ({attractions: state.adventureland.list})
 export default connect(mapStateToProps, {
   fetchAdventureland,
   incrementAdventureland,
-  decrementAdventureland  
+  decrementAdventureland
 })(AdventurelandContainer);

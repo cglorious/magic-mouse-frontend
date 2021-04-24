@@ -13,7 +13,11 @@ class FrontierlandContainer extends Component {
   render() {
     return (
       <div>
-        <Frontierland />
+        <Frontierland
+          attractions={this.props.attractions}
+          incrementFrontierland={this.props.incrementFrontierland}
+          decrementFrontierland={this.props.decrementFrontierland} 
+          />
       </div>
     );
   }

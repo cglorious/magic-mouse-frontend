@@ -13,7 +13,11 @@ class NolaContainer extends Component {
   render() {
     return (
       <div>
-        <Nola />
+        <Nola
+          attractions={this.props.attractions}
+          incrementNola={this.props.incrementNola}
+          decrementNola={this.props.decrementNola} 
+          />
       </div>
     );
   }
@@ -24,5 +28,5 @@ const mapStateToProps = state => ({attractions: state.nola.list})
 export default connect(mapStateToProps, {
   fetchNola,
   incrementNola,
-  decrementNola  
+  decrementNola
 })(NolaContainer);
