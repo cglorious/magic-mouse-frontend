@@ -2,14 +2,9 @@ import React from 'react';
 import StarWarsAttraction from './StarWarsAttraction';
 import "../styles/style.css";
 
-const StarWars = ({attractions, counter, increment, decrement}) => {
-
-//error - cannot read property map of undefined
-//attractions: [{}, {}]
-//count: [0,0]
+const StarWars = ({attractions, increment, decrement}) => {
 
   const listStarWarsAttractions = () => {
-      const array = {attractions}
       return attractions.map(attraction =>
           <StarWarsAttraction
             key={attraction.id}
@@ -17,7 +12,6 @@ const StarWars = ({attractions, counter, increment, decrement}) => {
             image={attraction.image_url}
             name={attraction.name}
             count={attraction.count}
-            counter={counter}
             increment={increment}
             decrement={decrement}
             />

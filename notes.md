@@ -11,3 +11,7 @@
 
 ## Stretch
 [   ] persist to the database
+
+## Notes
+- currently count is rendering from the backend
+- must render the state

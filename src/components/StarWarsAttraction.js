@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 import "../styles/style.css";
 import CounterContainer from '../containers/CounterContainer'
 
-const StarWarsAttraction = ({id, image, name, count, counter, increment, decrement}) => {
-
-//how to access counter[id - 1]?
+const StarWarsAttraction = ({id, image, name, count, increment, decrement}) => {
 
     return(
       <div>

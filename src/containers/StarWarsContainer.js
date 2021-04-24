@@ -15,7 +15,6 @@ class StarWarsContainer extends Component {
       <div>
         <StarWars
           attractions={this.props.attractions}
-          counter={this.props.counter}
           increment= {this.props.increment}
           decrement= {this.props.decrement}
           />
@@ -24,12 +23,8 @@ class StarWarsContainer extends Component {
   }
 }
 
-//attractions: [{}, {}]
-//count: [0,0]
-
 const mapStateToProps = state => ({
-  attractions: state.starWars.list,
-  counter: state.starWars.count
+  attractions: state.starWars.list
 })
 
 export default connect(mapStateToProps, {

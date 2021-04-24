@@ -1,11 +1,6 @@
-const starWarsReducer = (state = {list: [], count: []}, action) => {
+const starWarsReducer = (state = {list: []}, action) => {
   switch(action.type) {
     case 'LOAD_ATTRACTIONS_FOR_STARWARS':
-      const attractions = action.payload
-      const array = state.count
-      attractions.map(attraction => {
-        array.push(attraction.count)
-      })
       return {...state, list: action.payload }
     case 'INCREMENT':
       const incrementObj = state.list.find(attraction => (attraction.id === action.payload.id))
