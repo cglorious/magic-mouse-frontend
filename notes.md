@@ -8,6 +8,7 @@
 [ x ] increment to change state
 [ x ] decrement to change state
 [   ] render count
+[   ] maintain count when moving to another page
 
 ## Stretch
 [   ] persist to the database
@@ -17,3 +18,4 @@
 - must render the state
 - How to maintain state when leaving the page?
 - Do I need attractions components?
+- Add seed data (at least 1 ride per land)
