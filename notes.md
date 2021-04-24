@@ -16,3 +16,4 @@
 - currently count is updating in redux
 - must render the state
 - How to maintain state when leaving the page?
+- Do I need attractions components?
