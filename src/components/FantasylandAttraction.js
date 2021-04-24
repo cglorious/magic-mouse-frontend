@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import "../styles/style.css";
 
 const FantasylandAttraction = ({id, image, name, count, incrementFantasyland, decrementFantasyland}) => {
@@ -15,7 +14,7 @@ const FantasylandAttraction = ({id, image, name, count, incrementFantasyland, de
             alt={name}
             />
             <div className="card-body">
-              <h5 class="card-title">{name}</h5>
+              <h5 className="card-title">{name}</h5>
                 <div>
                   <h1>{count}</h1>
                   <p>

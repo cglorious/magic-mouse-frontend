@@ -1,8 +1,12 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import "../styles/style.css";
 
-const StarWarsAttraction = ({id, image, name, count, incrementStarWars, decrementStarWars}) => {
+const StarWarsAttraction = ({id, attraction, attractions, image, name, count, incrementStarWars, decrementStarWars}) => {
+
+  //find the attraction from the state and render the count
+  const renderState = () => {
+    return attractions.find(el => el.id === id).count
+  }
 
     return(
       <div>
@@ -15,11 +19,11 @@ const StarWarsAttraction = ({id, image, name, count, incrementStarWars, decremen
             alt={name}
             />
           <div className="card-body">
-            <h5 class="card-title">{name}</h5>
+            <h5 className="card-title">{name}</h5>
               <div>
-                <h1>{count}</h1>
+                <h1>{renderState()}</h1>
                 <p>
-                  <button id={id} className="btn btn-primary" onClick={() => {incrementStarWars(id)}}>+</button>    <button id={id} className="btn btn-primary" onClick={ () => decrementStarWars(id)}>-</button>
+                  <button id={id} className="btn btn-primary" onClick={() => {incrementStarWars(id)} }>+</button>    <button id={id} className="btn btn-primary" onClick={ () => decrementStarWars(id)}>-</button>
                 </p>
               </div>
           </div>

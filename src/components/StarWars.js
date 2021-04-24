@@ -9,6 +9,8 @@ const StarWars = ({attractions, incrementStarWars, decrementStarWars}) => {
           <StarWarsAttraction
             key={attraction.id}
             id={attraction.id}
+            attraction={attraction}
+            attractions={attractions}
             image={attraction.image_url}
             name={attraction.name}
             count={attraction.count}

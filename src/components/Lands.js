@@ -9,7 +9,6 @@ const Lands = ({lands}) => {
         <Land
           key={land.id}
           id={land.id}
-          slug={land.attributes.slug}
           image={land.attributes.image_url}
           name={land.attributes.name}
           description={land.attributes.description}
