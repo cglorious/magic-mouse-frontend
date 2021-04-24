@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchMickeysToonTown } from '../actions/loadAttractionsForLand'
-// import Fantasyland from '../components/Fantasyland';
+import MickeysToontown from '../components/MickeysToontown';
 
 class MickeysToontownContainer extends Component {
 
@@ -12,7 +12,7 @@ class MickeysToontownContainer extends Component {
   render() {
     return (
       <div>
-        MickeysToontownContainer
+        <MickeysToontown />
       </div>
     );
   }
