@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchAdventureland } from '../actions/loadAttractionsForLand'
-// import Fantasyland from '../components/Fantasyland';
+import Adventureland from '../components/Adventureland';
 
 class AdventurelandContainer extends Component {
 
@@ -12,7 +12,7 @@ class AdventurelandContainer extends Component {
   render() {
     return (
       <div>
-        Adventureland
+        <Adventureland />
       </div>
     );
   }
