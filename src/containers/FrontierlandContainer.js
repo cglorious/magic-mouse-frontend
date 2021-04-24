@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchFrontierland } from '../actions/loadAttractionsForLand'
+import { incrementFrontierland, decrementFrontierland } from '../actions/countAttractionsForLand'
 import Frontierland from '../components/Frontierland';
 
 class FrontierlandContainer extends Component {
@@ -20,4 +21,8 @@ class FrontierlandContainer extends Component {
 
 const mapStateToProps = state => ({attractions: state.frontierland.list})
 
-export default connect(mapStateToProps, { fetchFrontierland })(FrontierlandContainer);
+export default connect(mapStateToProps, {
+  fetchFrontierland,
+  incrementFrontierland,
+  decrementFrontierland
+})(FrontierlandContainer);
