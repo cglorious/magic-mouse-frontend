@@ -2,7 +2,7 @@ import React from 'react';
 import TomorrowlandAttraction from './TomorrowlandAttraction';
 import "../styles/style.css";
 
-const Tomorrowland = () => {
+const Tomorrowland = ({attractions, incrementTomorrowland, decrementTomorrowland}) => {
 
   return (
     <div>

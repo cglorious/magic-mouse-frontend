@@ -2,7 +2,7 @@ import React from 'react';
 import "../styles/style.css";
 import CritterCountryAttraction from './CritterCountryAttraction'
 
-const CritterCountry = () => {
+const CritterCountry = ({attractions, incrementCritterCountry, decrementCritterCountry}) => {
 
   return (
     <div>

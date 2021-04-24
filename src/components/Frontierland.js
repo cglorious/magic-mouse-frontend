@@ -2,7 +2,7 @@ import React from 'react';
 import "../styles/style.css";
 import FrontierlandAttraction from './FrontierlandAttraction'
 
-const Frontierland = () => {
+const Frontierland = ({attractions, incrementFrontierland, decrementFrontierland}) => {
 
   return (
     <div>
