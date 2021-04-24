@@ -13,6 +13,9 @@
 ## Stretch
 [   ] persist to the database
 
+## TODO
+- update land-attraction components
+
 ## Notes
 - currently count is updating in redux
 - must render the state
