@@ -2,7 +2,7 @@ import React from 'react';
 import StarWarsAttraction from './StarWarsAttraction';
 import "../styles/style.css";
 
-const StarWars = ({attractions, increment, decrement}) => {
+const StarWars = ({attractions, incrementStarWars, decrementStarWars}) => {
 
   const listStarWarsAttractions = () => {
       return attractions.map(attraction =>
@@ -12,8 +12,8 @@ const StarWars = ({attractions, increment, decrement}) => {
             image={attraction.image_url}
             name={attraction.name}
             count={attraction.count}
-            increment={increment}
-            decrement={decrement}
+            incrementStarWars={incrementStarWars}
+            decrementStarWars={decrementStarWars}
             />
       )
     }

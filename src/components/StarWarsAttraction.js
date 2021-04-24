@@ -1,16 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import "../styles/style.css";
-// import StarWarsHook from './StarWarsHook'
-// import { useSelector } from 'react-redux'
-// import { StarWarsHook } from './StarWarsHook'
 
-const StarWarsAttraction = ({id, image, name, count, increment, decrement}) => {
-
-//count changing in redux
-//pass the id down to StarWarsHook
-//<StarWarsHook id={id}/>
-// {StarWarsHook(id)}
+const StarWarsAttraction = ({id, image, name, count, incrementStarWars, decrementStarWars}) => {
 
     return(
       <div>
@@ -27,7 +19,7 @@ const StarWarsAttraction = ({id, image, name, count, increment, decrement}) => {
               <div>
                 <h1>{count}</h1>
                 <p>
-                  <button id={id} className="btn btn-primary" onClick={() => {increment(id)}}>+</button>    <button id={id} className="btn btn-primary" onClick={ () => decrement(id)}>-</button>
+                  <button id={id} className="btn btn-primary" onClick={() => {incrementStarWars(id)}}>+</button>    <button id={id} className="btn btn-primary" onClick={ () => decrementStarWars(id)}>-</button>
                 </p>
               </div>
           </div>

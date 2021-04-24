@@ -1,11 +1,11 @@
-export const increment = id => {
+export const incrementStarWars = id => {
   return {
     type: 'INCREMENT_STARWARS',
     payload: { id }
   }
 }
 
-export const decrement = id => {
+export const decrementStarWars = id => {
   return {
     type: 'DECREMENT_STARWARS',
     payload: { id }

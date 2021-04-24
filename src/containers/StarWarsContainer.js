@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchStarWars } from '../actions/loadAttractionsForLand'
-import { increment, decrement } from '../actions/count'
+import { incrementStarWars, decrementStarWars } from '../actions/count'
 import StarWars from '../components/StarWars';
 
 class StarWarsContainer extends Component {
@@ -15,8 +15,8 @@ class StarWarsContainer extends Component {
       <div>
         <StarWars
           attractions={this.props.attractions}
-          increment={this.props.increment}
-          decrement={this.props.decrement}
+          incrementStarWars={this.props.incrementStarWars}
+          decrementStarWars={this.props.decrementStarWars}
           />
       </div>
     );
@@ -27,6 +27,6 @@ const mapStateToProps = state => ({attractions: state.starWars.list})
 
 export default connect(mapStateToProps, {
   fetchStarWars,
-  increment,
-  decrement
+  incrementStarWars,
+  decrementStarWars
 })(StarWarsContainer);
