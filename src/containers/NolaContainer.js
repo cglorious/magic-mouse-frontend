@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchNola } from '../actions/loadAttractionsForLand'
-// import Fantasyland from '../components/Fantasyland';
+import Nola from '../components/Nola';
 
 class NolaContainer extends Component {
 
@@ -12,7 +12,7 @@ class NolaContainer extends Component {
   render() {
     return (
       <div>
-        NolaContainer
+        <Nola />
       </div>
     );
   }
