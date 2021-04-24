@@ -7,7 +7,7 @@ import tomorrowlandReducer from './tomorrowlandReducer';
 import adventurelandReducer from './adventurelandReducer';
 import critterCountryReducer from './critterCountryReducer';
 import frontierlandReducer from './frontierlandReducer';
-import mainstreetUSAReducer from './mainstreetUSAReducer';
+import mainstreetReducer from './mainstreetReducer';
 import mickeysToontownReducer from './mickeysToontownReducer';
 import nolaReducer from './nolaReducer';
 
@@ -20,7 +20,7 @@ const rootReducer = combineReducers({
   adventureland: adventurelandReducer,
   critterCountry: critterCountryReducer,
   frontierland: frontierlandReducer,
-  mainstreetUSA: mainstreetUSAReducer,
+  mainstreet: mainstreetReducer,
   mickeysToontown: mickeysToontownReducer,
   nola: nolaReducer
 });

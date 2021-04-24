@@ -70,13 +70,13 @@ export const fetchFrontierland = () => {
   }
 }
 
-export const fetchMainstreetUSA= () => {
+export const fetchMainstreet= () => {
   return(dispatch) => {
     fetch(`http://localhost:3000/api/v1/lands/7`)
     .then(resp => resp.json())
     .then(land => {
       dispatch({
-        type: 'LOAD_ATTRACTIONS_FOR_MAINSTREETUSA',
+        type: 'LOAD_ATTRACTIONS_FOR_MAINSTREET',
         payload: land.data.attributes.attractions})
     })
   }
