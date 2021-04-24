@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchFantasyland } from '../actions/loadAttractionsForLand'
-import { incrementFantasyland, decrementFantasyland } from '../actions/count'
+import { incrementFantasyland, decrementFantasyland } from '../actions/countAttractionsForLand'
 import Fantasyland from '../components/Fantasyland';
 
 class FantasylandContainer extends Component {

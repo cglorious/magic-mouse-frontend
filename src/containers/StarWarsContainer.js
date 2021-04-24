@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchStarWars } from '../actions/loadAttractionsForLand'
-import { incrementStarWars, decrementStarWars } from '../actions/count'
+import { incrementStarWars, decrementStarWars } from '../actions/countAttractionsForLand'
 import StarWars from '../components/StarWars';
 
 class StarWarsContainer extends Component {
