@@ -15,17 +15,15 @@ class StarWarsContainer extends Component {
       <div>
         <StarWars
           attractions={this.props.attractions}
-          increment= {this.props.increment}
-          decrement= {this.props.decrement}
+          increment={this.props.increment}
+          decrement={this.props.decrement}
           />
       </div>
     );
   }
 }
 
-const mapStateToProps = state => ({
-  attractions: state.starWars.list
-})
+const mapStateToProps = state => ({attractions: state.starWars.list})
 
 export default connect(mapStateToProps, {
   fetchStarWars,

@@ -13,5 +13,6 @@
 [   ] persist to the database
 
 ## Notes
-- currently count is rendering from the backend
+- currently count is updating in redux
 - must render the state
+- How to maintain state when leaving the page?

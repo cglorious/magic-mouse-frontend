@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import "../styles/style.css";
 
-const FantasylandAttraction = ({image, name, closure}) => {
+const FantasylandAttraction = ({id, image, name, count, incrementFantasyland, decrementFantasyland}) => {
 
     return(
       <div>
@@ -14,10 +14,15 @@ const FantasylandAttraction = ({image, name, closure}) => {
             src={image}
             alt={name}
             />
-          <div className="card-body">
-            <h5 class="card-title">{name}</h5>
-            <button class="btn btn-primary">+</button>  0  <button class="btn btn-primary">-</button>
-          </div>
+            <div className="card-body">
+              <h5 class="card-title">{name}</h5>
+                <div>
+                  <h1>{count}</h1>
+                  <p>
+                    <button id={id} className="btn btn-primary" onClick={() => {incrementFantasyland(id)}}>+</button>    <button id={id} className="btn btn-primary" onClick={ () => decrementFantasyland(id)}>-</button>
+                  </p>
+                </div>
+            </div>
         </div>
       </div>
     </div>
