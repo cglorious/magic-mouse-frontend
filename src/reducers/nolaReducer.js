@@ -11,6 +11,7 @@ const nolaReducer = (state = {list: []}, action) => {
       if (decrementObj.count >= 1){
         decrementObj.count -= 1
       }
+    break;
     default:
       return state;
   }
