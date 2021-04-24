@@ -3,7 +3,7 @@ import FantasylandAttraction from './FantasylandAttraction';
 import "../styles/style.css";
 
 const Fantasyland = ({attractions, incrementFantasyland, decrementFantasyland}) => {
-  
+
   const listFantasylandAttractions = () => {
       return attractions.map(attraction =>
         <FantasylandAttraction
@@ -12,8 +12,8 @@ const Fantasyland = ({attractions, incrementFantasyland, decrementFantasyland}) 
           image={attraction.image_url}
           name={attraction.name}
           count={attraction.count}
-          increment={incrementFantasyland}
-          decrement={decrementFantasyland}
+          incrementFantasyland={incrementFantasyland}
+          decrementFantasyland={decrementFantasyland}
           />
       )
     }

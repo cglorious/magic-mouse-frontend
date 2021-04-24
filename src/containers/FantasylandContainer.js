@@ -15,8 +15,8 @@ class FantasylandContainer extends Component {
       <div className="App">
         <Fantasyland
           attractions={this.props.attractions}
-          increment={this.props.incrementFantasyland}
-          decrement={this.props.decrementFantasyland}
+          incrementFantasyland={this.props.incrementFantasyland}
+          decrementFantasyland={this.props.decrementFantasyland}
           />
       </div>
     );

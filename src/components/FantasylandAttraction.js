@@ -19,7 +19,7 @@ const FantasylandAttraction = ({id, image, name, count, incrementFantasyland, de
                 <div>
                   <h1>{count}</h1>
                   <p>
-                    <button id={id} className="btn btn-primary" onClick={() => {incrementFantasyland(id)}}>+</button>    <button id={id} className="btn btn-primary" onClick={ () => decrementFantasyland(id)}>-</button>
+                    <button id={id} className="btn btn-primary" onClick={() => incrementFantasyland(id)}>+</button>    <button id={id} className="btn btn-primary" onClick={ () => decrementFantasyland(id)}>-</button>
                   </p>
                 </div>
             </div>
