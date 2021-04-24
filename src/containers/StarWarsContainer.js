@@ -12,7 +12,7 @@ class StarWarsContainer extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div>
         <StarWars
           attractions={this.props.attractions}
           counter={this.props.counter}
@@ -23,6 +23,9 @@ class StarWarsContainer extends Component {
     );
   }
 }
+
+//attractions: [{}, {}]
+//count: [0,0]
 
 const mapStateToProps = state => ({
   attractions: state.starWars.list,

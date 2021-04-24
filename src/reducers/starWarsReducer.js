@@ -8,15 +8,15 @@ const starWarsReducer = (state = {list: [], count: []}, action) => {
       })
       return {...state, list: action.payload }
     case 'INCREMENT':
-      const incrementList = state.list
-      return incrementList.map((attraction, id) => {
-        const index = id - 1
-        if (action.payload.id === attraction.id) {
-          return state.count[index] += 1
-        }
-      })
+      const incrementObj = state.list.find(attraction => (attraction.id === action.payload.id))
+      incrementObj.count += 1
+      return state
     case 'DECREMENT':
-        return {...state, count: state.count - 1}
+      const decrementObj = state.list.find(attraction => (attraction.id === action.payload.id))
+      if (decrementObj.count >= 1){
+        decrementObj.count -= 1
+      }
+      return state
     default:
       return state;
   }

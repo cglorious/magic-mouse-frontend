@@ -1,13 +1,13 @@
 ### Attractions
 [   ] As Coco, I want to add a counter so I can track how many times I rode a ride.
 
-#### Star Wars
+#### MVP
 [ x ] Button to component
 [ x ] Count state to reducer
-[   ] access counter value that matches entity / connect to count value
-[   ] increment to change state
-[   ] decrement to change state
+[ x ] access counter value that matches entity / connect to count value
+[ x ] increment to change state
+[ x ] decrement to change state
+[   ] render count
 
-## Notes
-- Data structure - { }
-- Should it persist to the backend?
+## Stretch
+[   ] persist to the database

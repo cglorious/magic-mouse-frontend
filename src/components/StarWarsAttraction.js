@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../styles/style.css";
 import CounterContainer from '../containers/CounterContainer'
 
-const StarWarsAttraction = ({id, image, name, counter, increment, decrement}) => {
+const StarWarsAttraction = ({id, image, name, count, counter, increment, decrement}) => {
 
 //how to access counter[id - 1]?
 
@@ -20,9 +20,9 @@ const StarWarsAttraction = ({id, image, name, counter, increment, decrement}) =>
           <div className="card-body">
             <h5 class="card-title">{name}</h5>
               <div>
-                <h1>{counter}</h1>
+                <h1>{count}</h1>
                 <p>
-                  <button id={id} className="btn btn-primary" onClick={ () => increment({id})}>+</button>    <button id={id} className="btn btn-primary" onClick={ () => decrement({id})}>-</button>
+                  <button id={id} className="btn btn-primary" onClick={ () => increment(id)}>+</button>    <button id={id} className="btn btn-primary" onClick={ () => decrement(id)}>-</button>
                 </p>
               </div>
           </div>

@@ -4,13 +4,19 @@ import "../styles/style.css";
 
 const StarWars = ({attractions, counter, increment, decrement}) => {
 
+//error - cannot read property map of undefined
+//attractions: [{}, {}]
+//count: [0,0]
+
   const listStarWarsAttractions = () => {
+      const array = {attractions}
       return attractions.map(attraction =>
           <StarWarsAttraction
             key={attraction.id}
             id={attraction.id}
             image={attraction.image_url}
             name={attraction.name}
+            count={attraction.count}
             counter={counter}
             increment={increment}
             decrement={decrement}
