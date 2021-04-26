@@ -1,10 +1,14 @@
+// import patchStarWars from './actions/patchAttraction'
+
 const starWarsReducer = (state = {list: []}, action) => {
   switch(action.type) {
     case 'LOAD_ATTRACTIONS_FOR_STARWARS':
       return {...state, list: action.payload }
     case 'INCREMENT_STARWARS':
       const incrementObj = state.list.find(attraction => (attraction.id === action.payload.id))
-      incrementObj.count += 1
+      const newCount = incrementObj.count += 1
+      const id = incrementObj.id
+      // patchStarWars(newCount, id)
       return state
     case 'DECREMENT_STARWARS':
       const decrementObj = state.list.find(attraction => (attraction.id === action.payload.id))

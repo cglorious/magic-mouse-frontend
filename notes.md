@@ -9,8 +9,6 @@
 [ x ] decrement to change state
 [   ] render count
 [   ] maintain count when moving to another page
-
-## Stretch
 [   ] persist to the database
 
 ## TODO
