@@ -11,6 +11,7 @@ const mickeysToontownReducer = (state = {list: []}, action) => {
       if (decrementObj.count >= 1){
         decrementObj.count -= 1
       }
+      return state
     break;
     default:
       return state;
