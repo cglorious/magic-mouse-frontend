@@ -9,7 +9,7 @@ export const patchStarWars = (count, id) => {
   })
   .then(resp => resp.json())
   .then(data => console.log('Success:', data));
-  .catch((error) => {
-    console.error('Error:', error);
-  })
+  // .catch((error) => {
+  //   console.error('Error:', error);
+  // })
   };

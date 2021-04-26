@@ -17,3 +17,4 @@
 - currently count is updating in redux
 - persist information to database
 - Land Container - option to fetch all attractions data
+- patchStarWars / StarWars Reducer
