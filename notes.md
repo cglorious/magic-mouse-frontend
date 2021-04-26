@@ -14,8 +14,8 @@
 [   ] persist to the database
 
 ## TODO
-- fetch data when lands load
 
 ## Notes
 - currently count is updating in redux
 - persist information to database
+- Land Container - option to fetch all attractions data
