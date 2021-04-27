@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { fetchStarWars } from '../actions/loadAttractionsForLand'
 import { incrementStarWars, decrementStarWars } from '../actions/countAttractionsForLand'
 import StarWarsAttraction from '../components/StarWarsAttraction';
-// import StarWars from '../components/StarWars';
 
 class StarWarsContainer extends Component {
 
