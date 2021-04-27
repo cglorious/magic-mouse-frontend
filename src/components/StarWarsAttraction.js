@@ -3,10 +3,9 @@ import "../styles/style.css";
 
 const StarWarsAttraction = ({id, attractions, image, name, count, incrementStarWars, decrementStarWars}) => {
 
-  // const renderCount = () => {
-  //   if the state changes
-  //   render count
-  // }
+  const renderCount = () => {
+    return attractions.find(attraction => id === attraction.id).count
+  }
 
     return(
       <div>
@@ -21,7 +20,7 @@ const StarWarsAttraction = ({id, attractions, image, name, count, incrementStarW
           <div className="card-body">
             <h5 className="card-title">{name}</h5>
               <div>
-                <h1>{count}</h1>
+                <h1 id={id}>{renderCount()}</h1>
                 <p>
                   <button id={id} className="btn btn-primary" onClick={() => {incrementStarWars(id)} }>+</button>    <button id={id} className="btn btn-primary" onClick={ () => decrementStarWars(id)}>-</button>
                 </p>

@@ -20,8 +20,8 @@ class StarWarsContainer extends Component {
               image={attraction.image_url}
               name={attraction.name}
               count={attraction.count}
-              incrementStarWars={incrementStarWars}
-              decrementStarWars={decrementStarWars}
+              incrementStarWars={this.props.incrementStarWars}
+              decrementStarWars={this.props.decrementStarWars}
               />
         )
       }
