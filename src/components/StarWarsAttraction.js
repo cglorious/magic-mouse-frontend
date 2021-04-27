@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "../styles/style.css";
 import { connect } from 'react-redux';
+import { patchStarWars } from '../actions/patchAttraction'
 
 class StarWarsAttraction extends Component {
 
@@ -8,12 +9,12 @@ class StarWarsAttraction extends Component {
 
       const { name, id, image, currentState } = this.props
 
-      const updateCount = id => {
+      const updatedCount = id => {
         return currentState.find(attraction => id === attraction.id).count
       }
 
       const renderCount = () => {
-        document.getElementById(name).innerHTML = updateCount(id)
+        document.getElementById(name).innerHTML = updatedCount(id)
       }
 
     return(
@@ -51,4 +52,4 @@ class StarWarsAttraction extends Component {
 
 const mapStateToProps = state => ({currentState: state.starWars.list})
 
-export default connect(mapStateToProps)(StarWarsAttraction);
+export default connect(mapStateToProps, {patchStarWars})(StarWarsAttraction);

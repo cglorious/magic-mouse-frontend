@@ -1,4 +1,4 @@
-export const patchStarWars = (id) => {
+export const patchStarWars = (count, id) => {
   return ({dispatch}) => {
     fetch(`http://localhost:3000/api/v1/attractions/${id}`,
     {
@@ -6,12 +6,12 @@ export const patchStarWars = (id) => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({count: count +=1}),
+      body: JSON.stringify({count: count}),
     })
     .then(resp => resp.json())
-    .then(data => {
+    .then(attraction => {
       dispatch({
-        type: 'UPDATE_COUNT'
-      })
-    });
-  };
+        type: 'UPDATE_COUNT'})
+    })
+  }
+}
