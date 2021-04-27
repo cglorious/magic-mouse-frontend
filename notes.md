@@ -7,18 +7,15 @@
 [ x ] access counter value that matches entity / connect to count value
 [ x ] increment to change state
 [ x ] decrement to change state
-[   ] render count
+[ x ] render count
 [   ] maintain count when moving to another page
 [   ] persist to the database
 
 ## TODO
+- delete additional land-attraction components
 
 ## Notes
-- currently count is updating in redux
 - persist information to database
-- Land Container - option to fetch all attractions data
 - patchStarWars / StarWars Reducer
-- all containers are connected to the store through connect
 
 ## Requirements
-- Do I need to have a POST request if I implement a PATCH request?
