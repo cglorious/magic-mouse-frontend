@@ -1,12 +1,12 @@
-export const patchStarWars = (count, id) => {
-  return (dispatch) => {
+export const patchStarWars = (id) => {
+  return ({dispatch}) => {
     fetch(`http://localhost:3000/api/v1/attractions/${id}`,
     {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({count: count}),
+      body: JSON.stringify({count: count +=1}),
     })
     .then(resp => resp.json())
     .then(data => {
@@ -14,22 +14,4 @@ export const patchStarWars = (count, id) => {
         type: 'UPDATE_COUNT'
       })
     });
-  // .catch((error) => {
-  //   console.error('Error:', error);
-  // })
   };
-
-//dispatch...{action}
-// export const fetchAttractions = () => {
-//   return(dispatch) => {
-//     fetch('http://localhost:3000/api/v1/attractions')
-//     .then(resp => resp.json())
-//     .then(lands => {
-//       dispatch({
-//         type: 'FETCH_ATTRACTIONS',
-//         payload: lands.data})
-//     })
-//   }
-// }
-
-//next - dispatch

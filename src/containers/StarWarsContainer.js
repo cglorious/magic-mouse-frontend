@@ -10,6 +10,7 @@ class StarWarsContainer extends Component {
     this.props.fetchStarWars()
   }
 
+
   render() {
     const listStarWarsAttractions = () => {
         return this.props.attractions.map(attraction =>
