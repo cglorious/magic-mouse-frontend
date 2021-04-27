@@ -1,14 +1,12 @@
 import React from 'react';
 import "../styles/style.css";
 
-const StarWarsAttraction = ({id, attraction, attractions, image, name, count, incrementStarWars, decrementStarWars}) => {
+const StarWarsAttraction = ({id, attractions, image, name, count, incrementStarWars, decrementStarWars}) => {
 
-  //find the attraction from the state and render the count
-  const renderState = () => {
-    return attractions.find(el => el.id === id).count
-  }
-
-  // <h1>{renderState()}</h1>
+  // const renderCount = () => {
+  //   if the state changes
+  //   render count
+  // }
 
     return(
       <div>

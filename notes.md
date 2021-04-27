@@ -18,6 +18,7 @@
 - persist information to database
 - Land Container - option to fetch all attractions data
 - patchStarWars / StarWars Reducer
+- all containers are connected to the store through connect
 
 ## Requirements
 - Do I need to have a POST request if I implement a PATCH request?
