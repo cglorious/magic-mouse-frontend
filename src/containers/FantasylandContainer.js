@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchFantasyland } from '../actions/loadAttractionsForLand'
 import { incrementFantasyland, decrementFantasyland } from '../actions/countAttractionsForLand'
-import Fantasyland from '../components/Fantasyland';
+import FantasylandAttraction from '../components/FantasylandAttraction';
 
 class FantasylandContainer extends Component {
 
@@ -11,13 +11,29 @@ class FantasylandContainer extends Component {
   }
 
   render() {
+    const listFantasylandAttractions = () => {
+        return this.props.attractions.map(attraction =>
+          <FantasylandAttraction
+            key={attraction.id}
+            id={attraction.id}
+            attractions={this.props.attractions}
+            image={attraction.image_url}
+            name={attraction.name}
+            count={attraction.count}
+            incrementFantasyland={this.props.incrementFantasyland}
+            decrementFantasyland={this.props.decrementFantasyland}
+            />
+        )
+      }
+
     return (
-      <div className="App">
-        <Fantasyland
-          attractions={this.props.attractions}
-          incrementFantasyland={this.props.incrementFantasyland}
-          decrementFantasyland={this.props.decrementFantasyland}
-          />
+      <div>
+        <div className="page-container">
+          <h3 className="header">Fantasyland</h3>
+          <div className="row row-cols-1 row-cols-md-3 g-4">
+            {listFantasylandAttractions()}
+          </div>
+        </div>
       </div>
     );
   }
