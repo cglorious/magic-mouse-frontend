@@ -7,7 +7,7 @@ class StarWarsAttraction extends Component {
 
     render() {
 
-      const { name, id, image, currentState } = this.props
+      const { attraction, name, id, image, currentState, incrementStarWars, decrementStarWars } = this.props
 
       const updatedCount = id => {
         return currentState.find(attraction => id === attraction.id).count
@@ -33,10 +33,10 @@ class StarWarsAttraction extends Component {
                 <h1 id={this.props.name}>0</h1>
                 <p>
                   <button id={id} className="btn btn-primary" onClick={() => {
-                      this.props.incrementStarWars(id)
+                      incrementStarWars(id)
                       renderCount()}
-                    }>+</button>    <button id={id} className="btn btn-primary" onClick={ () =>
-                    {this.props.decrementStarWars(id)
+                    }>+</button>    <button id={id} className="btn btn-primary" onClick={ () => {
+                      decrementStarWars(id)
                       renderCount()}
                     }>-</button>
                 </p>
