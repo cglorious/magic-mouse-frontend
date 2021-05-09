@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { fetchCritterCountry } from '../actions/loadAttractionsForLand'
 import { incrementCritterCountry, decrementCritterCountry } from '../actions/countAttractionsForLand'
 import CritterCountryAttraction from '../components/CritterCountryAttraction';
+import { Link } from 'react-router-dom'
 
 class CritterCountryContainer extends Component {
 
@@ -33,6 +34,9 @@ class CritterCountryContainer extends Component {
           <div className="row row-cols-1 row-cols-md-3 g-4">
             {listCritterCountryAttractions()}
           </div>
+        </div>
+        <div className="center-btn">
+          <Link to='/add-attraction' className="btn btn-primary btn-lg px-4 me-sm-3">Add Attraction</Link>
         </div>
       </div>
     );

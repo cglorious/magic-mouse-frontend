@@ -5,7 +5,7 @@
 }
 
 /* Resorts */
-.header{
+.header {
   text-align: center;
 }
 
@@ -32,6 +32,14 @@
 #attraction-card-image{
   height: 175px;
   width: 100%
+}
+#add-attraction-form{
+  padding-top: 50px;
+  padding-right: 250px;
+  padding-left: 250px;
+}
+.center-btn, #center-btn{
+  text-align: center;
 }
 
 /* Footer */

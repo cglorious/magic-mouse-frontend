@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { fetchMainstreet } from '../actions/loadAttractionsForLand'
 import { incrementMainstreet, decrementMainstreet } from '../actions/countAttractionsForLand'
 import MainstreetAttraction from '../components/MainstreetAttraction';
+import { Link } from 'react-router-dom'
 
 class MainstreetContainer extends Component {
 
@@ -31,6 +32,9 @@ class MainstreetContainer extends Component {
           <h3 className="header">Mainstreet, U.S.A.</h3>
           <div className="row row-cols-1 row-cols-md-3 g-4">
             {listMainstreetAttractions()}
+          </div>
+          <div className="center-btn">
+            <Link to='/add-attraction' className="btn btn-primary btn-lg px-4 me-sm-3">Add Attraction</Link>
           </div>
         </div>
       </div>

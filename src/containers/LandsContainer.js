@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { fetchLands } from '../actions/fetchLands'
 import Lands from '../components/Lands';
 import AddAttractionForm from '../components/AddAttractionForm'
-import { Link } from 'react-router-dom'
 
 class LandsContainer extends Component {
 
@@ -17,7 +16,6 @@ class LandsContainer extends Component {
         <Lands
           lands={this.props.lands}
           />
-        <Link to='/add-attraction'>Add Attraction</Link>
       </div>
     );
   }
