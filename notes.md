@@ -12,7 +12,7 @@
 [   ] persist to the database
 
 ## TODO
-- delete additional land-attraction components
+- delete attraction components
 
 ## Notes
 - persist information to database
