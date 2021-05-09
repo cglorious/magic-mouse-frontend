@@ -29,7 +29,7 @@ class FantasylandAttraction extends Component {
             <div className="card-body">
               <h5 className="card-title">{name}</h5>
                 <div>
-                  <h1 id={this.props.name}>0</h1>
+                  <h1 id={name}>0</h1>
                   <p>
                     <button id={id} className="btn btn-primary" onClick={() => {
                         incrementFantasyland(id)
