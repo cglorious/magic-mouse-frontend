@@ -7,8 +7,8 @@ class Form extends Component {
 
   state = {
     name: '',
-    image: '',
-    land: 1,
+    image_url: '',
+    land_id: 1,
     closure: false,
     count: 0
   }
@@ -39,7 +39,7 @@ class Form extends Component {
           <br />
           <label>Image: </label>
           <input
-            name='image'
+            name='image_url'
             type='text'
             placeholder='https://'
             value={this.state.image}
