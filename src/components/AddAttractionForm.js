@@ -34,7 +34,8 @@ class AddAttractionForm extends Component {
 
   render() {
     return (
-      <div>
+      <div className="page-container">
+        <h3 className="header">Add an Attraction</h3>
         <form id="add-attraction-form" onSubmit={this.handleSubmit}>
           <div className="mb-3">
             <label className="form-label">Attraction Name:</label>
@@ -61,7 +62,7 @@ class AddAttractionForm extends Component {
           </div>
 
           <select name="land_id" className="form-select" aria-label="Default select example" onChange={this.handleChange}>
-            <option selected>Open this select menu</option>
+            <option selected>Choose a Land</option>
             <option value="1">Star Wars</option>
             <option value="2">Fantasyland</option>
             <option value="3">Tomorrowland</option>
