@@ -1,30 +1,23 @@
-// export const incrementStarWars = id => {
-//   return (dispatch) => {
-//     dispatch({
-//     type: 'INCREMENT_STARWARS',
-//     payload: { id }
-//     })
-//   }
-// }
-
-export const patchStarWars = (count, id) => {
-  return (dispatch) => {
-    fetch(`http://localhost:3000/api/v1/attractions/${id}`,
-    {
-      method: 'PATCH',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        'count': count
-      }),
-    })
+export const patchStarWars = (attraction) => {
+  // return (dispatch) => {
+    fetch(`http://localhost:3000/api/v1/attractions/${attraction.id}`)
+    //   ,
+    // {
+    //   method: 'PATCH',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify({
+    //     'count': attraction.count
+    //   }),
+    // })
     .then(resp => resp.json())
-    .then(attraction => {
-      dispatch({
-        type: 'UPDATE_COUNT',
-        payload: attraction.data
-      })
+    .then(json => {
+      // dispatch({
+      //   type: 'UPDATE_COUNT',
+      //   payload: attraction.data
+      // })
+      console.log(`${json.data.attributes.name}: ${json.data.attributes.count}`)
     })
-  }
+  // }
 }

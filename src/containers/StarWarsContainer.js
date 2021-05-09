@@ -18,7 +18,7 @@ class StarWarsContainer extends Component {
               key={attraction.id}
               id={attraction.id}
               attractions={this.props.attractions}
-              attraction={this.props.attraction}
+              attraction={attraction}
               image={attraction.image_url}
               name={attraction.name}
               count={attraction.count}

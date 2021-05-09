@@ -15,6 +15,7 @@ const starWarsReducer = (state = {list: []}, action) => {
       }
       return state
     case 'UPDATE_COUNT':
+
       return state
     default:
       return state;

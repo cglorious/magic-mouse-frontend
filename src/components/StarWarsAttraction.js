@@ -34,6 +34,7 @@ class StarWarsAttraction extends Component {
                 <p>
                   <button id={id} className="btn btn-primary" onClick={() => {
                       incrementStarWars(id)
+                      patchStarWars(attraction)
                       renderCount()}
                     }>+</button>    <button id={id} className="btn btn-primary" onClick={ () => {
                       decrementStarWars(id)
