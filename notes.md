@@ -12,10 +12,12 @@
 [   ] persist to the database
 
 ## TODO
-- delete attraction components
+- patch request
+- dispatch state
+- update reducer
 
 ## Notes
 - persist information to database
 - patchStarWars / StarWars Reducer
-- debug frontierland - fetch api
+
 ## Requirements
