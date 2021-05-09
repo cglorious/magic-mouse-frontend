@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchAdventureland } from '../actions/loadAttractionsForLand'
 import { incrementAdventureland, decrementAdventureland } from '../actions/countAttractionsForLand'
-import Adventureland from '../components/Adventureland';
+import AdventurelandAttraction from '../components/Adventureland';
 
 class AdventurelandContainer extends Component {
 
@@ -11,13 +11,29 @@ class AdventurelandContainer extends Component {
   }
 
   render() {
+    const listAdventurelandAttractions = () => {
+        return this.props.attractions.map(attraction =>
+          <AdventurelandAttraction
+            key={attraction.id}
+            id={attraction.id}
+            attractions={this.props.attractions}
+            image={attraction.image_url}
+            name={attraction.name}
+            count={attraction.count}
+            incrementAdventureland={this.props.incrementAdventureland}
+            decrementAdventureland={this.props.decrementAdventureland}
+            />
+        )
+      }
+
     return (
       <div>
-        <Adventureland
-          attractions={this.props.attractions}
-          incrementAdventureland={this.props.incrementAdventureland}
-          decrementAdventureland={this.props.decrementAdventureland} 
-          />
+        <div className="page-container">
+          <h3 className="header">Adventureland</h3>
+          <div className="row row-cols-1 row-cols-md-3 g-4">
+            {listAdventurelandAttractions()}
+          </div>
+        </div>
       </div>
     );
   }

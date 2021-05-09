@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
 import "../styles/style.css";
+import { connect } from 'react-redux';
 
-const AdventurelandAttraction = ({id, image, name, count, incrementAdventureland, decrementAdventureland}) => {
+class AdventurelandAttraction extends Component {
+
+  render() {
+
+  const { id, image, name, currentState, incrementAdventureland, decrementAdventureland } = this.props
+
+  const updatedCount = id => {
+    return currentState.find(attraction => id === attraction.id).count
+  }
+
+  const renderCount = () => {
+    document.getElementById(name).innerHTML = updatedCount(id)
+  }
 
   return (
     <div>
@@ -16,9 +29,15 @@ const AdventurelandAttraction = ({id, image, name, count, incrementAdventureland
           <div className="card-body">
             <h5 className="card-title">{name}</h5>
               <div>
-                <h1>{count}</h1>
+                <h1 id={name}>0</h1>
                 <p>
-                  <button id={id} className="btn btn-primary" onClick={() => incrementAdventureland(id)}>+</button>    <button id={id} className="btn btn-primary" onClick={ () => decrementAdventureland(id)}>-</button>
+                  <button id={id} className="btn btn-primary" onClick={() => {
+                      incrementAdventureland(id)
+                      renderCount()}
+                    }>+</button>    <button id={id} className="btn btn-primary" onClick={ () => {
+                      decrementAdventureland(id)
+                      renderCount()}
+                    }>-</button>
                 </p>
               </div>
           </div>
@@ -27,5 +46,8 @@ const AdventurelandAttraction = ({id, image, name, count, incrementAdventureland
     </div>
   );
 };
+};
 
-export default AdventurelandAttraction;
+const mapStateToProps = state => ({currentState: state.adventureland.list})
+
+export default connect(mapStateToProps)(AdventurelandAttraction);
