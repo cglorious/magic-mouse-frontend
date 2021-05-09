@@ -8,11 +8,11 @@ export const addAttraction = (data) => {
       },
       body: JSON.stringify(data),
       })
-    // .then(resp => resp.json())
-    // .then(lands => {
-    //   dispatch({
-    //     type: 'FETCH_ATTRACTIONS',
-    //     payload: lands.data})
-    // })
+    .then(resp => resp.json())
+    .then(attraction => {
+      dispatch({
+        type: 'ADD_ATTRACTION',
+        payload: attraction.data})
+    })
   }
 }

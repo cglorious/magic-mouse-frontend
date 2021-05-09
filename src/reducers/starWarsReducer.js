@@ -14,8 +14,9 @@ const starWarsReducer = (state = {list: []}, action) => {
         decrementObj.count -= 1
       }
       return state
+    case 'ADD_ACCOUNT':
+      return {...state, list: [...state.list, action.payload]}
     case 'UPDATE_COUNT':
-
       return state
     default:
       return state;
