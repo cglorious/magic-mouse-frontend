@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchAdventureland } from '../actions/loadAttractionsForLand'
 import { incrementAdventureland, decrementAdventureland } from '../actions/countAttractionsForLand'
-import AdventurelandAttraction from '../components/Adventureland';
+import AdventurelandAttraction from '../components/AdventurelandAttraction';
 
 class AdventurelandContainer extends Component {
 
