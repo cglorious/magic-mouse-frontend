@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { Component }  from 'react';
 import "../styles/style.css";
+import { connect } from 'react-redux';
 
-const TomorrowlandAttraction = ({id, image, name, count, incrementTomorrowland, decrementTomorrowland}) => {
+class TomorrowlandAttraction extends Component {
+
+  render() {
+
+  const { id, image, name, currentState, incrementTomorrowland, decrementTomorrowland } = this.props
+
+  const updatedCount = id => {
+    return currentState.find(attraction => id === attraction.id).count
+  }
+
+  const renderCount = () => {
+    document.getElementById(name).innerHTML = updatedCount(id)
+  }
 
   return (
     <div>
@@ -16,9 +29,15 @@ const TomorrowlandAttraction = ({id, image, name, count, incrementTomorrowland, 
           <div className="card-body">
             <h5 className="card-title">{name}</h5>
               <div>
-                <h1>{count}</h1>
+                <h1 id={name}>0</h1>
                 <p>
-                  <button id={id} className="btn btn-primary" onClick={() => incrementTomorrowland(id)}>+</button>    <button id={id} className="btn btn-primary" onClick={ () => decrementTomorrowland(id)}>-</button>
+                  <button id={id} className="btn btn-primary" onClick={() => {
+                      incrementTomorrowland(id)
+                      renderCount()}
+                    }>+</button>    <button id={id} className="btn btn-primary" onClick={ () => {
+                      decrementTomorrowland(id)
+                      renderCount()}
+                    }>-</button>
                 </p>
               </div>
           </div>
@@ -28,4 +47,8 @@ const TomorrowlandAttraction = ({id, image, name, count, incrementTomorrowland, 
   );
 };
 
-export default TomorrowlandAttraction;
+};
+
+const mapStateToProps = state => ({currentState: state.tomorrowland.list})
+
+export default connect(mapStateToProps)(TomorrowlandAttraction);
