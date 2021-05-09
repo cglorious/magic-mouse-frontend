@@ -4,6 +4,10 @@
   margin: auto;
 }
 
+#nav-bar{
+  background-color: #0779BC;
+}
+
 /* Resorts */
 .header {
   text-align: center;
@@ -40,10 +44,14 @@
 }
 .center-btn, #center-btn{
   text-align: center;
+  padding: 40px;
 }
 
 /* Footer */
 #footer{
+  padding: 30px;
+  background-color: #0779BC;
+  color: white;
   text-align: center;
 }
 

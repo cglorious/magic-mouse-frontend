@@ -18,7 +18,7 @@
 - on form submit, re-render lands
 
 ## Notes
-- persist information to database
+- persist information to database (patch - count)
 - patchStarWars / StarWars Reducer
 
 ## Requirements

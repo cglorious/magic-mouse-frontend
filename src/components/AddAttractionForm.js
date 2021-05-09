@@ -74,7 +74,9 @@ class AddAttractionForm extends Component {
             <option value="9" >New Orleans Square</option>
           </select>
           <br/><br/>
-          <p id="center-btn"><button type="submit" className="btn btn-primary">Submit</button></p>
+          <p id="center-btn">
+              <button type="submit" className="btn btn-primary">Submit</button>
+          </p>
         </form>
       </div>
     );
