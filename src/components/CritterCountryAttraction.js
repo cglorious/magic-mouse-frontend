@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { Component }  from 'react';
 import "../styles/style.css";
+import { connect } from 'react-redux';
 
-const CritterCountryAttraction = ({id, image, name, count, incrementCritterCountry, decrementCritterCountry}) => {
+class CritterCountryAttraction extends Component {
 
+  render() {
+
+  const { id, image, name, currentState, incrementCritterCountry, decrementCritterCountry } = this.props
+
+  const updatedCount = id => {
+    return currentState.find(attraction => id === attraction.id).count
+  }
+
+  const renderCount = () => {
+    document.getElementById(name).innerHTML = updatedCount(id)
+  }
   return (
     <div>
       <div id="card-container">
@@ -16,10 +28,15 @@ const CritterCountryAttraction = ({id, image, name, count, incrementCritterCount
           <div className="card-body">
             <h5 className="card-title">{name}</h5>
               <div>
-                <h1>{count}</h1>
+                <h1 id={name}>0</h1>
                 <p>
-                  <button id={id} className="btn btn-primary" onClick={() => incrementCritterCountry(id)}>+</button>    <button id={id} className="btn btn-primary" onClick={ () => decrementCritterCountry(id)}>-</button>
-                </p>
+                  <button id={id} className="btn btn-primary" onClick={() => {
+                      incrementCritterCountry(id)
+                      renderCount()}
+                    }>+</button>    <button id={id} className="btn btn-primary" onClick={ () => {
+                      decrementCritterCountry(id)
+                      renderCount()}
+                    }>-</button>                </p>
               </div>
           </div>
       </div>
@@ -27,5 +44,8 @@ const CritterCountryAttraction = ({id, image, name, count, incrementCritterCount
     </div>
   );
 };
+};
 
-export default CritterCountryAttraction;
+const mapStateToProps = state => ({currentState: state.critterCountry.list})
+
+export default connect(mapStateToProps)(CritterCountryAttraction);

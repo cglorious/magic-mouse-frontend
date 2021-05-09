@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchCritterCountry } from '../actions/loadAttractionsForLand'
 import { incrementCritterCountry, decrementCritterCountry } from '../actions/countAttractionsForLand'
-import CritterCountry from '../components/CritterCountry';
+import CritterCountryAttraction from '../components/CritterCountryAttraction';
 
 class CritterCountryContainer extends Component {
 
@@ -11,13 +11,29 @@ class CritterCountryContainer extends Component {
   }
 
   render() {
+    const listCritterCountryAttractions = () => {
+        return this.props.attractions.map(attraction =>
+          <CritterCountryAttraction
+            key={attraction.id}
+            id={attraction.id}
+            attractions={this.props.attractions}
+            image={attraction.image_url}
+            name={attraction.name}
+            count={attraction.count}
+            incrementCritterCountry={this.props.incrementCritterCountry}
+            decrementCritterCountry={this.props.decrementCritterCountry}
+            />
+        )
+      }
+
     return (
       <div>
-        <CritterCountry
-          attractions={this.props.attractions}
-          incrementCritterCountry={this.props.incrementCritterCountry}
-          decrementCritterCountry={this.props.decrementCritterCountry} 
-          />
+        <div className="page-container">
+          <h3 className="header">Critter Country</h3>
+          <div className="row row-cols-1 row-cols-md-3 g-4">
+            {listCritterCountryAttractions()}
+          </div>
+        </div>
       </div>
     );
   }
