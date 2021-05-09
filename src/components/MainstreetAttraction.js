@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { Component }  from 'react';
 import "../styles/style.css";
+import { connect } from 'react-redux';
 
-const MainstreetAttraction = ({id, image, name, count, incrementMainstreet, decrementMainstreet}) => {
+class MainstreetAttraction extends Component {
+
+  render() {
+  const { id, image, name, currentState, incrementMainstreet, decrementMainstreet } = this.props
+
+  const updatedCount = id => {
+    return currentState.find(attraction => id === attraction.id).count
+  }
+
+  const renderCount = () => {
+    document.getElementById(name).innerHTML = updatedCount(id)
+  }
 
   return (
     <div>
@@ -16,9 +28,15 @@ const MainstreetAttraction = ({id, image, name, count, incrementMainstreet, decr
           <div className="card-body">
             <h5 className="card-title">{name}</h5>
               <div>
-                <h1>{count}</h1>
+                <h1 id={name}>0</h1>
                 <p>
-                  <button id={id} className="btn btn-primary" onClick={() => incrementMainstreet(id)}>+</button>    <button id={id} className="btn btn-primary" onClick={ () => decrementMainstreet(id)}>-</button>
+                  <button id={id} className="btn btn-primary" onClick={() => {
+                      incrementMainstreet(id)
+                      renderCount()}
+                    }>+</button>    <button id={id} className="btn btn-primary" onClick={ () => {
+                      decrementMainstreet(id)
+                      renderCount()}
+                    }>-</button>
                 </p>
               </div>
           </div>
@@ -28,4 +46,8 @@ const MainstreetAttraction = ({id, image, name, count, incrementMainstreet, decr
   );
 };
 
-export default MainstreetAttraction;
+};
+
+const mapStateToProps = state => ({currentState: state.mainstreet.list})
+
+export default connect(mapStateToProps)(MainstreetAttraction);

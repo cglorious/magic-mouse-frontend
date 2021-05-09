@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchMainstreet } from '../actions/loadAttractionsForLand'
 import { incrementMainstreet, decrementMainstreet } from '../actions/countAttractionsForLand'
-import Mainstreet from '../components/Mainstreet';
+import MainstreetAttraction from '../components/MainstreetAttraction';
 
 class MainstreetContainer extends Component {
 
@@ -11,13 +11,28 @@ class MainstreetContainer extends Component {
   }
 
   render() {
+    const listMainstreetAttractions = () => {
+        return this.props.attractions.map(attraction =>
+          <MainstreetAttraction
+            key={attraction.id}
+            id={attraction.id}
+            attractions={this.props.attractions}
+            image={attraction.image_url}
+            name={attraction.name}
+            count={attraction.count}
+            incrementMainstreet={this.props.incrementMainstreet}
+            decrementMainstreet={this.props.decrementMainstreet}
+            />
+        )
+      }
     return (
       <div>
-        <Mainstreet
-          attractions={this.props.attractions}
-          incrementMainstreet={this.props.incrementMainstreet}
-          decrementMainstreet={this.props.decrementMainstreet} 
-          />
+        <div className="page-container">
+          <h3 className="header">Mainstreet, U.S.A.</h3>
+          <div className="row row-cols-1 row-cols-md-3 g-4">
+            {listMainstreetAttractions()}
+          </div>
+        </div>
       </div>
     );
   }
