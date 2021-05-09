@@ -3,12 +3,12 @@ import "../styles/style.css";
 import { connect } from 'react-redux';
 import { addAttraction } from '../actions/addAttraction'
 
-class Form extends Component {
+class AddAttractionForm extends Component {
 
   state = {
     name: '',
     image_url: '',
-    land_id: 1,
+    land_id: '',
     closure: false,
     count: 0
   }
@@ -46,6 +46,12 @@ class Form extends Component {
             onChange={this.handleChange}
           />
           <br />
+          <label for="cars">Choose a land:</label>
+            <select name="land_id" id="cars" onChange={this.handleChange}>
+              <option value="1" >Star Wars</option>
+              <option value="2" >Fantasyland</option>
+              <option value="3" >Tomorrowland</option>
+            </select>
           <input
           type='submit'
           />
@@ -55,4 +61,4 @@ class Form extends Component {
   }
 };
 
-export default connect(null, {addAttraction})(Form);
+export default connect(null, {addAttraction})(AddAttractionForm);
