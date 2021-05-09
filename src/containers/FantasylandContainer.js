@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { fetchFantasyland } from '../actions/loadAttractionsForLand'
 import { incrementFantasyland, decrementFantasyland } from '../actions/countAttractionsForLand'
 import FantasylandAttraction from '../components/FantasylandAttraction';
-import { Link } from 'react-router-dom'
 
 class FantasylandContainer extends Component {
 
@@ -34,9 +33,6 @@ class FantasylandContainer extends Component {
           <div className="row row-cols-1 row-cols-md-3 g-4">
             {listFantasylandAttractions()}
           </div>
-        </div>
-        <div className="center-btn">
-          <Link to='/add-attraction' className="btn btn-primary btn-lg px-4 me-sm-3">Add Attraction</Link>
         </div>
       </div>
     );

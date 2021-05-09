@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { fetchMickeysToonTown } from '../actions/loadAttractionsForLand'
 import { incrementMickeysToontown, decrementMickeysToontown } from '../actions/countAttractionsForLand'
 import MickeysToontownAttraction from '../components/MickeysToontownAttraction';
-import { Link } from 'react-router-dom'
 
 class MickeysToontownContainer extends Component {
 
@@ -32,9 +31,6 @@ class MickeysToontownContainer extends Component {
           <h3 className="header">Mickey's Toontown</h3>
           <div className="row row-cols-1 row-cols-md-3 g-4">
             {listMickeysToontownAttractions()}
-          </div>
-          <div className="center-btn">
-            <Link to='/add-attraction' className="btn btn-primary btn-lg px-4 me-sm-3">Add Attraction</Link>
           </div>
         </div>
       </div>
