@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
 import "../styles/style.css";
+import { connect } from 'react-redux';
 
-const FrontierlandAttraction = ({id, image, name, count, incrementFrontierland, decrementFrontierland}) => {
+class FrontierlandAttraction extends Component {
 
+  render() {
+
+  const { id, image, name, currentState, incrementFrontierland, decrementFrontierland } = this.props
+
+  const updatedCount = id => {
+    return currentState.find(attraction => id === attraction.id).count
+  }
+
+  const renderCount = () => {
+    document.getElementById(name).innerHTML = updatedCount(id)
+  }
   return (
     <div>
       <div id="card-container">
@@ -16,10 +28,15 @@ const FrontierlandAttraction = ({id, image, name, count, incrementFrontierland, 
           <div className="card-body">
             <h5 className="card-title">{name}</h5>
               <div>
-                <h1>{count}</h1>
+                <h1 id={name}>0</h1>
                 <p>
-                  <button id={id} className="btn btn-primary" onClick={() => incrementFrontierland(id)}>+</button>    <button id={id} className="btn btn-primary" onClick={ () => decrementFrontierland(id)}>-</button>
-                </p>
+                  <button id={id} className="btn btn-primary" onClick={() => {
+                      incrementFrontierland(id)
+                      renderCount()}
+                    }>+</button>    <button id={id} className="btn btn-primary" onClick={ () => {
+                      decrementFrontierland(id)
+                      renderCount()}
+                    }>-</button>                </p>
               </div>
           </div>
       </div>
@@ -27,5 +44,8 @@ const FrontierlandAttraction = ({id, image, name, count, incrementFrontierland, 
     </div>
   );
 };
+};
 
-export default FrontierlandAttraction;
+const mapStateToProps = state => ({currentState: state.frontierland.list})
+
+export default connect(mapStateToProps)(FrontierlandAttraction);

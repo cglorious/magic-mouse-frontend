@@ -17,5 +17,5 @@
 ## Notes
 - persist information to database
 - patchStarWars / StarWars Reducer
-
+- debug frontierland - fetch api
 ## Requirements

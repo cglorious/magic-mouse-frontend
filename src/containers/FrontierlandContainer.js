@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchFrontierland } from '../actions/loadAttractionsForLand'
 import { incrementFrontierland, decrementFrontierland } from '../actions/countAttractionsForLand'
-import Frontierland from '../components/Frontierland';
+import FrontierlandAttraction from '../components/FrontierlandAttraction';
 
 class FrontierlandContainer extends Component {
 
@@ -11,13 +11,28 @@ class FrontierlandContainer extends Component {
   }
 
   render() {
+    const listFrontierlandAttractions = () => {
+        return this.props.attractions.map(attraction =>
+          <FrontierlandAttraction
+            key={attraction.id}
+            id={attraction.id}
+            attractions={this.props.attractions}
+            image={attraction.image_url}
+            name={attraction.name}
+            count={attraction.count}
+            incrementFrontierland={this.props.incrementFrontierland}
+            decrementFrontierland={this.props.decrementFrontierland}
+            />
+        )
+      }
     return (
       <div>
-        <Frontierland
-          attractions={this.props.attractions}
-          incrementFrontierland={this.props.incrementFrontierland}
-          decrementFrontierland={this.props.decrementFrontierland} 
-          />
+        <div className="page-container">
+          <h3 className="header">Frontierland</h3>
+          <div className="row row-cols-1 row-cols-md-3 g-4">
+            {listFrontierlandAttractions()}
+          </div>
+        </div>
       </div>
     );
   }
