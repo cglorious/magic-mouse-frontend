@@ -51,6 +51,12 @@ class AddAttractionForm extends Component {
               <option value="1" >Star Wars</option>
               <option value="2" >Fantasyland</option>
               <option value="3" >Tomorrowland</option>
+              <option value="3" >Adventureland</option>
+              <option value="3" >Critter Country</option>
+              <option value="3" >Frontierland</option>
+              <option value="3" >Mainstreet, U.S.A.</option>
+              <option value="3" >Mickey's Toontown</option>
+              <option value="3" >New Orleans Square</option>
             </select>
           <input
           type='submit'

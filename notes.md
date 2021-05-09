@@ -15,6 +15,7 @@
 - patch request
 - dispatch state
 - update reducer
+- on form submit, re-render lands
 
 ## Notes
 - persist information to database
