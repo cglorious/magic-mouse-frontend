@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import "../styles/style.css";
 import { connect } from 'react-redux';
-import { patchStarWars } from '../actions/patchAttraction'
 
 class StarWarsAttraction extends Component {
 
@@ -34,7 +33,6 @@ class StarWarsAttraction extends Component {
                 <p>
                   <button id={id} className="btn btn-primary" onClick={() => {
                       incrementStarWars(id)
-                      patchStarWars(attraction)
                       renderCount()}
                     }>+</button>    <button id={id} className="btn btn-primary" onClick={ () => {
                       decrementStarWars(id)
@@ -53,4 +51,4 @@ class StarWarsAttraction extends Component {
 
 const mapStateToProps = state => ({currentState: state.starWars.list})
 
-export default connect(mapStateToProps, {patchStarWars})(StarWarsAttraction);
+export default connect(mapStateToProps)(StarWarsAttraction);
