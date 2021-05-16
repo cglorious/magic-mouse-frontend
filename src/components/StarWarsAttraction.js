@@ -1,20 +1,7 @@
 import React, { Component } from 'react';
 import "../styles/style.css";
-import { connect } from 'react-redux';
 
-class StarWarsAttraction extends Component {
-
-    render() {
-
-      const { attraction, name, id, image, currentState, incrementStarWars, decrementStarWars } = this.props
-
-      const updatedCount = id => {
-        return currentState.find(attraction => id === attraction.id).count
-      }
-
-      const renderCount = () => {
-        document.getElementById(name).innerHTML = updatedCount(id)
-      }
+const StarWarsAttraction = ({ attraction, name, id, image, log })  => {
 
     return(
       <div>
@@ -27,17 +14,10 @@ class StarWarsAttraction extends Component {
             alt={name}
             />
           <div className="card-body">
-            <h5 className="card-title">{this.props.name}</h5>
+            <h5 className="card-title">{name}</h5>
               <div>
-                <h1 id={this.props.name}>0</h1>
                 <p>
-                  <button id={id} className="btn btn-primary" onClick={() => {
-                      incrementStarWars(id)
-                      renderCount()}
-                    }>+</button>    <button id={id} className="btn btn-primary" onClick={ () => {
-                      decrementStarWars(id)
-                      renderCount()}
-                    }>-</button>
+                  {log}
                 </p>
               </div>
           </div>
@@ -45,10 +25,7 @@ class StarWarsAttraction extends Component {
       </div>
     </div>
     );
-  }
 
 };
 
-const mapStateToProps = state => ({currentState: state.starWars.list})
-
-export default connect(mapStateToProps)(StarWarsAttraction);
+export default StarWarsAttraction;

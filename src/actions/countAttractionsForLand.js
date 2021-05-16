@@ -1,20 +1,3 @@
-export const incrementStarWars = id => {
-  return (dispatch) => {
-    dispatch({
-    type: 'INCREMENT_STARWARS',
-    payload: { id }
-    })
-  }
-}
-
-export const decrementStarWars = id => {
-  return (dispatch) =>
-    dispatch({
-    type: 'DECREMENT_STARWARS',
-    payload: { id }
-  })
-}
-
 export const incrementFantasyland = id => {
   return {
     type: 'INCREMENT_FANTASYLAND',
