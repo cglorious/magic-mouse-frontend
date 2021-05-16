@@ -10,8 +10,8 @@ class AddAttractionForm extends Component {
     name: '',
     image_url: '',
     land_id: '',
-    closure: false,
-    count: 0
+    count: 0,
+    log: ''
   }
 
   handleChange = event => {
@@ -27,8 +27,8 @@ class AddAttractionForm extends Component {
       name: '',
       image_url: '',
       land_id: '',
-      closure: false,
-      count: 0
+      count: 0,
+      log: ''
     })
   }
 
@@ -58,8 +58,20 @@ class AddAttractionForm extends Component {
               value={this.state.image_url}
               onChange={this.handleChange}
               />
-            <div id="emailHelp" class="form-text">Add an image URL for the attraction above.</div>
+            <div className="form-text"><small>Add an image URL for the attraction above.</small></div>
           </div>
+          <div className="form-group">
+            <label for="exampleFormControlTextarea1">About the Attraction:</label>
+            <textarea
+              className="form-control"
+              name='log'
+              placeholder='This attraction was my favorite!'
+              value={this.state.log}
+              onChange={this.handleChange}
+              rows="3"></textarea>
+            <div className="form-text"><small>How was your experience?</small></div>
+          </div>
+
 
           <select name="land_id" className="form-select" aria-label="Default select example" onChange={this.handleChange}>
             <option selected>Choose a Land</option>
