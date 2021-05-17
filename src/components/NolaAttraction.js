@@ -1,19 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import "../styles/style.css";
-import { connect } from 'react-redux';
 
-class NolaAttraction extends Component {
-
-  render() {
-  const { id, image, name, currentState, incrementNola, decrementNola } = this.props
-
-  const updatedCount = id => {
-    return currentState.find(attraction => id === attraction.id).count
-  }
-
-  const renderCount = () => {
-    document.getElementById(name).innerHTML = updatedCount(id)
-  }
+const NolaAttraction = ({ id, image, name, log }) => {
 
   return (
     <div>
@@ -28,15 +16,8 @@ class NolaAttraction extends Component {
           <div className="card-body">
             <h5 className="card-title">{name}</h5>
               <div>
-                <h1 id={name}>0</h1>
                 <p>
-                  <button id={id} className="btn btn-primary" onClick={() => {
-                      incrementNola(id)
-                      renderCount()}
-                    }>+</button>    <button id={id} className="btn btn-primary" onClick={ () => {
-                      decrementNola(id)
-                      renderCount()}
-                    }>-</button>
+                  {log}
                 </p>
               </div>
           </div>
@@ -46,8 +27,4 @@ class NolaAttraction extends Component {
   );
 };
 
-};
-
-const mapStateToProps = state => ({currentState: state.nola.list})
-
-export default connect(mapStateToProps)(NolaAttraction);
+export default NolaAttraction;

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchNola } from '../actions/loadAttractionsForLand'
-import { incrementNola, decrementNola } from '../actions/countAttractionsForLand'
 import NolaAttraction from '../components/NolaAttraction';
 
 class NolaContainer extends Component {
@@ -16,12 +15,9 @@ class NolaContainer extends Component {
           <NolaAttraction
             key={attraction.id}
             id={attraction.id}
-            attractions={this.props.attractions}
             image={attraction.image_url}
             name={attraction.name}
-            count={attraction.count}
-            incrementNola={this.props.incrementNola}
-            decrementNola={this.props.decrementNola}
+            log={attraction.log}
             />
         )
       }
@@ -41,7 +37,5 @@ class NolaContainer extends Component {
 const mapStateToProps = state => ({attractions: state.nola.list})
 
 export default connect(mapStateToProps, {
-  fetchNola,
-  incrementNola,
-  decrementNola
+  fetchNola
 })(NolaContainer);
