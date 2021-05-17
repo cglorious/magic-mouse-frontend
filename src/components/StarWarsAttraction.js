@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import "../styles/style.css";
 
 const StarWarsAttraction = ({ id, image, name, log })  => {

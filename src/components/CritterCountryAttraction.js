@@ -1,7 +1,7 @@
 import React from 'react';
 import "../styles/style.css";
 
-const CritterCountryAttraction = ({id, image, name, log}) => {
+const CritterCountryAttraction = ({ id, image, name, log }) => {
 
   return (
     <div>
