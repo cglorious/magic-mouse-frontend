@@ -1,4 +1,4 @@
-const allAttractionsReducer = (state = {list: []}, action) => {
+const addAttractionReducer = (state = {list: []}, action) => {
   switch(action.type) {
     case 'ADD_ATTRACTION':
       return {...state, list: [...state.list, action.payload]}
@@ -7,4 +7,4 @@ const allAttractionsReducer = (state = {list: []}, action) => {
   }
 }
 
-export default allAttractionsReducer;
+export default addAttractionReducer;

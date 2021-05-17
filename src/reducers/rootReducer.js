@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
 import landsReducer from './landsReducer';
-import allAttractionsReducer from './allAttractionsReducer'
+import addAttractionReducer from './addAttractionReducer'
 import starWarsReducer from './starWarsReducer';
 import fantasylandReducer from './fantasylandReducer';
 import tomorrowlandReducer from './tomorrowlandReducer';
@@ -13,7 +13,7 @@ import nolaReducer from './nolaReducer';
 
 const rootReducer = combineReducers({
   lands: landsReducer,
-  attractions: allAttractionsReducer,
+  addAttraction: addAttractionReducer,
   starWars: starWarsReducer,
   fantasyland: fantasylandReducer,
   tomorrowland: tomorrowlandReducer,
