@@ -33,10 +33,10 @@ class AddAttractionForm extends Component {
   render() {
     return (
       <div className="page-container">
-        <h3 className="header">Add an Attraction</h3>
+        <h3 className="header">Add a Memory</h3>
         <form id="add-attraction-form" onSubmit={this.handleSubmit}>
           <div className="mb-3">
-            <label className="form-label">Attraction Name:</label>
+            <label className="form-label">Attraction:</label>
             <input
               className="form-control"
               name='name'
@@ -56,10 +56,9 @@ class AddAttractionForm extends Component {
               value={this.state.image_url}
               onChange={this.handleChange}
               />
-            <div className="form-text"><small>Add an image URL for the attraction above.</small></div>
           </div>
           <div className="form-group">
-            <label for="exampleFormControlTextarea1">About the Attraction:</label>
+            <label for="exampleFormControlTextarea1">About:</label>
             <textarea
               className="form-control"
               name='log'
@@ -67,7 +66,7 @@ class AddAttractionForm extends Component {
               value={this.state.log}
               onChange={this.handleChange}
               rows="3"></textarea>
-            <div className="form-text"><small>How was your experience?</small></div>
+            <div className="form-text"><small>Log your experience.</small></div>
           </div>
 
 
