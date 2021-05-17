@@ -1,17 +1,3 @@
-export const incrementFantasyland = id => {
-  return {
-    type: 'INCREMENT_FANTASYLAND',
-    payload: { id }
-  }
-}
-
-export const decrementFantasyland = id => {
-  return {
-    type: 'DECREMENT_FANTASYLAND',
-    payload: { id }
-  }
-}
-
 export const incrementAdventureland = id => {
   return {
     type: 'INCREMENT_ADVENTURELAND',

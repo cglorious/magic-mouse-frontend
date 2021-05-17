@@ -1,20 +1,7 @@
-import React, { Component }  from 'react';
+import React from 'react';
 import "../styles/style.css";
-import { connect } from 'react-redux';
 
-class FantasylandAttraction extends Component {
-
-  render() {
-
-  const { id, image, name, currentState, incrementFantasyland, decrementFantasyland } = this.props
-
-  const updatedCount = id => {
-    return currentState.find(attraction => id === attraction.id).count
-  }
-
-  const renderCount = () => {
-    document.getElementById(name).innerHTML = updatedCount(id)
-  }
+const FantasylandAttraction = ({ id, image, name, log}) => {
 
     return(
       <div>
@@ -29,16 +16,7 @@ class FantasylandAttraction extends Component {
             <div className="card-body">
               <h5 className="card-title">{name}</h5>
                 <div>
-                  <h1 id={name}>0</h1>
-                  <p>
-                    <button id={id} className="btn btn-primary" onClick={() => {
-                        incrementFantasyland(id)
-                        renderCount()}
-                      }>+</button>    <button id={id} className="btn btn-primary" onClick={ () => {
-                        decrementFantasyland(id)
-                        renderCount()}
-                      }>-</button>
-                  </p>
+                  <p>{log}</p>
                 </div>
             </div>
         </div>
@@ -47,8 +25,4 @@ class FantasylandAttraction extends Component {
     );
 };
 
-};
-
-const mapStateToProps = state => ({currentState: state.fantasyland.list})
-
-export default connect(mapStateToProps)(FantasylandAttraction);
+export default FantasylandAttraction;
