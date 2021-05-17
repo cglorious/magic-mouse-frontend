@@ -19,7 +19,7 @@ const NavBar = () => {
             </ul>
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" href="/add-attraction">Add Memories</a>
+                <a className="nav-link" href="/add-attraction">Add Memory</a>
               </li>
             </ul>
           </div>
