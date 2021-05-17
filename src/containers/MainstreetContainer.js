@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchMainstreet } from '../actions/loadAttractionsForLand'
-import { incrementMainstreet, decrementMainstreet } from '../actions/countAttractionsForLand'
 import MainstreetAttraction from '../components/MainstreetAttraction';
 
 class MainstreetContainer extends Component {
@@ -16,12 +15,9 @@ class MainstreetContainer extends Component {
           <MainstreetAttraction
             key={attraction.id}
             id={attraction.id}
-            attractions={this.props.attractions}
             image={attraction.image_url}
             name={attraction.name}
-            count={attraction.count}
-            incrementMainstreet={this.props.incrementMainstreet}
-            decrementMainstreet={this.props.decrementMainstreet}
+            log={attraction.log}
             />
         )
       }
@@ -41,7 +37,5 @@ class MainstreetContainer extends Component {
 const mapStateToProps = state => ({attractions: state.mainstreet.list})
 
 export default connect(mapStateToProps, {
-  fetchMainstreet,
-  incrementMainstreet,
-  decrementMainstreet
+  fetchMainstreet
 })(MainstreetContainer);
