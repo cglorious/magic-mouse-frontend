@@ -13,14 +13,4 @@
 [   ] persist to the database
 
 ## TODO
-- patch request
-- dispatch state
-- update reducer
-- on form submit, re-render lands
-- center ride cards
-
-## Notes
-- persist information to database (patch - count)
-- patchStarWars / StarWars Reducer
-
-## Requirements
+- render '/lands' onClick
