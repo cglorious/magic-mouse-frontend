@@ -1,17 +1,3 @@
-export const incrementFrontierland = id => {
-  return {
-    type: 'INCREMENT_FRONTIERLAND',
-    payload: { id }
-  }
-}
-
-export const decrementFrontierland = id => {
-  return {
-    type: 'DECREMENT_FRONTIERLAND',
-    payload: { id }
-  }
-}
-
 export const incrementMainstreet= id => {
   return {
     type: 'INCREMENT_MAINSTREET',
