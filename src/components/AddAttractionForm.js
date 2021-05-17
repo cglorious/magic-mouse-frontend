@@ -10,7 +10,6 @@ class AddAttractionForm extends Component {
     name: '',
     image_url: '',
     land_id: '',
-    count: 0,
     log: ''
   }
 
@@ -27,7 +26,6 @@ class AddAttractionForm extends Component {
       name: '',
       image_url: '',
       land_id: '',
-      count: 0,
       log: ''
     })
   }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "../styles/style.css";
 
-const StarWarsAttraction = ({ attraction, name, id, image, log })  => {
+const StarWarsAttraction = ({ id, image, name, log })  => {
 
     return(
       <div>
@@ -16,7 +16,7 @@ const StarWarsAttraction = ({ attraction, name, id, image, log })  => {
           <div className="card-body">
             <h5 className="card-title">{name}</h5>
               <div>
-                <p>
+                <p id={id}>
                   {log}
                 </p>
               </div>

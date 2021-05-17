@@ -16,7 +16,9 @@ const FantasylandAttraction = ({ id, image, name, log}) => {
             <div className="card-body">
               <h5 className="card-title">{name}</h5>
                 <div>
-                  <p>{log}</p>
+                  <p id={id}>
+                    {log}
+                  </p>
                 </div>
             </div>
         </div>
