@@ -33,10 +33,10 @@
 }
 
 /* Attraction */
-#attraction-card-image{
-  height: 175px;
+/* #attraction-card-image{
+  height: 200px;
   width: 100%
-}
+} */
 #add-attraction-form{
   padding-top: 25px;
   padding-right: 250px;
