@@ -1,17 +1,3 @@
-export const incrementCritterCountry = id => {
-  return {
-    type: 'INCREMENT_CRITTERCOUNTRY',
-    payload: { id }
-  }
-}
-
-export const decrementCritterCountry = id => {
-  return {
-    type: 'DECREMENT_CRITTERCOUNTRY',
-    payload: { id }
-  }
-}
-
 export const incrementFrontierland = id => {
   return {
     type: 'INCREMENT_FRONTIERLAND',

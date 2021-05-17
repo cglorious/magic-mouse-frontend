@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchCritterCountry } from '../actions/loadAttractionsForLand'
-import { incrementCritterCountry, decrementCritterCountry } from '../actions/countAttractionsForLand'
 import CritterCountryAttraction from '../components/CritterCountryAttraction';
 
 class CritterCountryContainer extends Component {
@@ -16,12 +15,9 @@ class CritterCountryContainer extends Component {
           <CritterCountryAttraction
             key={attraction.id}
             id={attraction.id}
-            attractions={this.props.attractions}
             image={attraction.image_url}
             name={attraction.name}
-            count={attraction.count}
-            incrementCritterCountry={this.props.incrementCritterCountry}
-            decrementCritterCountry={this.props.decrementCritterCountry}
+            log={attraction.log}
             />
         )
       }
@@ -42,7 +38,5 @@ class CritterCountryContainer extends Component {
 const mapStateToProps = state => ({attractions: state.critterCountry.list})
 
 export default connect(mapStateToProps, {
-  fetchCritterCountry,
-  incrementCritterCountry,
-  decrementCritterCountry
+  fetchCritterCountry
 })(CritterCountryContainer);
