@@ -12,20 +12,6 @@ export const decrementFantasyland = id => {
   }
 }
 
-export const incrementTomorrowland = id => {
-  return {
-    type: 'INCREMENT_TOMORROWLAND',
-    payload: { id }
-  }
-}
-
-export const decrementTomorrowland = id => {
-  return {
-    type: 'DECREMENT_TOMORROWLAND',
-    payload: { id }
-  }
-}
-
 export const incrementAdventureland = id => {
   return {
     type: 'INCREMENT_ADVENTURELAND',
