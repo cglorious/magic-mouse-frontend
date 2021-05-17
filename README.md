@@ -1,6 +1,6 @@
 # Fruits Parlor Crown
 
-Magic Mouse is a Web Application built while attending Flatiron School using React Redux that communicates with the backend Ruby on Rails API. It is intended for visitors to track their Disney experience. Users can add attractions and count their rides.
+Magic Mouse is a Web Application built while attending Flatiron School using React Redux that communicates with the backend Ruby on Rails API. It is intended for visitors to log their Disney experience. Users can add images on attractions and log their experience.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). It connects to a [backend Ruby on Rails API](https://github.com/cglorious/magic-mouse-backend).
 
