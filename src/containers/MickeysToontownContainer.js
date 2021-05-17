@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchMickeysToonTown } from '../actions/loadAttractionsForLand'
-import { incrementMickeysToontown, decrementMickeysToontown } from '../actions/countAttractionsForLand'
 import MickeysToontownAttraction from '../components/MickeysToontownAttraction';
 
 class MickeysToontownContainer extends Component {
@@ -16,12 +15,9 @@ class MickeysToontownContainer extends Component {
           <MickeysToontownAttraction
             key={attraction.id}
             id={attraction.id}
-            attractions={this.props.attractions}
             image={attraction.image_url}
             name={attraction.name}
-            count={attraction.count}
-            incrementMickeysToontown={this.props.incrementMickeysToontown}
-            decrementMickeysToontown={this.props.decrementMickeysToontown}
+            log={attraction.log}
             />
         )
       }
@@ -41,7 +37,5 @@ class MickeysToontownContainer extends Component {
 const mapStateToProps = state => ({attractions: state.mickeysToontown.list})
 
 export default connect(mapStateToProps, {
-  fetchMickeysToonTown,
-  incrementMickeysToontown,
-  decrementMickeysToontown
+  fetchMickeysToonTown
 })(MickeysToontownContainer);

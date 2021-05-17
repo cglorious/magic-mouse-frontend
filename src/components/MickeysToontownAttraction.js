@@ -1,19 +1,8 @@
-import React, { Component }  from 'react';
+import React from 'react';
 import "../styles/style.css";
-import { connect } from 'react-redux';
 
-class MickeysToontownAttraction extends Component {
+const MickeysToontownAttraction = ( { id, image, name, log} ) => {
 
-  render() {
-  const { id, image, name, currentState, incrementMickeysToontown, decrementMickeysToontown } = this.props
-
-  const updatedCount = id => {
-    return currentState.find(attraction => id === attraction.id).count
-  }
-
-  const renderCount = () => {
-    document.getElementById(name).innerHTML = updatedCount(id)
-  }
   return (
     <div>
       <div id="card-container">
@@ -27,15 +16,8 @@ class MickeysToontownAttraction extends Component {
           <div className="card-body">
             <h5 className="card-title">{name}</h5>
               <div>
-                <h1 id={name}>0</h1>
                 <p>
-                  <button id={id} className="btn btn-primary" onClick={() => {
-                      incrementMickeysToontown(id)
-                      renderCount()}
-                    }>+</button>    <button id={id} className="btn btn-primary" onClick={ () => {
-                      decrementMickeysToontown(id)
-                      renderCount()}
-                    }>-</button>
+                  {log}
                 </p>
               </div>
           </div>
@@ -45,8 +27,4 @@ class MickeysToontownAttraction extends Component {
   );
 };
 
-};
-
-const mapStateToProps = state => ({currentState: state.mickeysToontown.list})
-
-export default connect(mapStateToProps)(MickeysToontownAttraction);
+export default MickeysToontownAttraction;
