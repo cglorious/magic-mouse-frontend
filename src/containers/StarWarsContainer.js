@@ -16,10 +16,8 @@ class StarWarsContainer extends Component {
             <StarWarsAttraction
               key={attraction.id}
               id={attraction.id}
-              attraction={attraction}
               image={attraction.image_url}
               name={attraction.name}
-              count={attraction.count}
               log={attraction.log}
               />
         )

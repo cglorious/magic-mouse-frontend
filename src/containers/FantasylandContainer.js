@@ -17,7 +17,6 @@ class FantasylandContainer extends Component {
             id={attraction.id}
             image={attraction.image_url}
             name={attraction.name}
-            count={attraction.count}
             log={attraction.log}
             />
         )
