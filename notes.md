@@ -13,4 +13,5 @@
 [   ] persist to the database
 
 ## TODO
+- update addAttractionReducer
 - render '/lands' onClick
