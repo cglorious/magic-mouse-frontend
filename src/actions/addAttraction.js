@@ -12,7 +12,7 @@ export const addAttraction = (data) => {
     .then(attraction => {
       dispatch({
         type: 'ADD_ATTRACTION',
-        payload: attraction.data})
+        payload: attraction})
     })
   }
 }
