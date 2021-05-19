@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/style.css";
+import { Link } from "react-router-dom"
 
 const MainPage = () => {
 
@@ -18,7 +19,7 @@ const MainPage = () => {
           <p className="lead mb-4">Relive your Disney adventures by adding them <br/>  to a virtual Magic Mouse scrapbook.</p>
         </div>
         <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
-          <a href="/lands" className="btn btn-primary btn-lg px-4 me-sm-3">I'm ready!</a>
+          <Link to="/lands" className="btn btn-primary btn-lg px-4 me-sm-3">I'm ready!</Link>
         </div>
       </div>
     </div>
