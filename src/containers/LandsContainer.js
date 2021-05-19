@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchLands } from '../actions/fetchLands'
 import Lands from '../components/Lands';
-import AddAttractionForm from '../components/AddAttractionForm'
 
 class LandsContainer extends Component {
 

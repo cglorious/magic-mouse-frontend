@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import "../styles/style.css";
 import { connect } from 'react-redux';
 import { addAttraction } from '../actions/addAttraction'
-import { Link } from 'react-router-dom'
 
 class AddAttractionForm extends Component {
 
