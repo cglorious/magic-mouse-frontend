@@ -4,7 +4,7 @@ import "../styles/style.css";
 const FrontierlandAttraction = ({ id, image, name, log }) => {
 
   return (
-    <div>
+    <div id={id}>
       <div id="card-container">
       <div className="card" id="resort-card">
         <img
