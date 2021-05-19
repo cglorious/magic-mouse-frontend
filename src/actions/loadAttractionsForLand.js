@@ -1,5 +1,5 @@
 export const fetchStarWars = () => {
-  return(dispatch) => {
+  return (dispatch) => {
     fetch(`http://localhost:3000/api/v1/lands/1`)
     .then(resp => resp.json())
     .then(land => {
@@ -11,7 +11,7 @@ export const fetchStarWars = () => {
 }
 
 export const fetchFantasyland = () => {
-  return(dispatch) => {
+  return (dispatch) => {
     fetch(`http://localhost:3000/api/v1/lands/2`)
     .then(resp => resp.json())
     .then(land => {
@@ -23,7 +23,7 @@ export const fetchFantasyland = () => {
 }
 
 export const fetchTomorrowland = () => {
-  return(dispatch) => {
+  return (dispatch) => {
     fetch(`http://localhost:3000/api/v1/lands/3`)
     .then(resp => resp.json())
     .then(land => {
@@ -35,7 +35,7 @@ export const fetchTomorrowland = () => {
 }
 
 export const fetchAdventureland = () => {
-  return(dispatch) => {
+  return (dispatch) => {
     fetch(`http://localhost:3000/api/v1/lands/4`)
     .then(resp => resp.json())
     .then(land => {
@@ -47,7 +47,7 @@ export const fetchAdventureland = () => {
 }
 
 export const fetchCritterCountry = () => {
-  return(dispatch) => {
+  return (dispatch) => {
     fetch(`http://localhost:3000/api/v1/lands/5`)
     .then(resp => resp.json())
     .then(land => {
@@ -59,7 +59,7 @@ export const fetchCritterCountry = () => {
 }
 
 export const fetchFrontierland = () => {
-  return(dispatch) => {
+  return (dispatch) => {
     fetch(`http://localhost:3000/api/v1/lands/6`)
     .then(resp => resp.json())
     .then(land => {
@@ -71,7 +71,7 @@ export const fetchFrontierland = () => {
 }
 
 export const fetchMainstreet= () => {
-  return(dispatch) => {
+  return (dispatch) => {
     fetch(`http://localhost:3000/api/v1/lands/7`)
     .then(resp => resp.json())
     .then(land => {
@@ -83,7 +83,7 @@ export const fetchMainstreet= () => {
 }
 
 export const fetchMickeysToonTown= () => {
-  return(dispatch) => {
+  return (dispatch) => {
     fetch(`http://localhost:3000/api/v1/lands/8`)
     .then(resp => resp.json())
     .then(land => {
@@ -95,7 +95,7 @@ export const fetchMickeysToonTown= () => {
 }
 
 export const fetchNola= () => {
-  return(dispatch) => {
+  return (dispatch) => {
     fetch(`http://localhost:3000/api/v1/lands/9`)
     .then(resp => resp.json())
     .then(land => {

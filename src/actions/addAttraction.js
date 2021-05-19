@@ -1,5 +1,5 @@
 export const addAttraction = (data) => {
-  return(dispatch) => {
+  return (dispatch) => {
     fetch('http://localhost:3000/api/v1/attractions', {
       method: 'POST',
       headers: {
