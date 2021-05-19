@@ -22,4 +22,12 @@ class LandsContainer extends Component {
 
 const mapStateToProps = state => ({lands: state.lands.list})
 
-export default connect(mapStateToProps, { fetchLands })(LandsContainer);
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchLands: () => {
+      dispatch(fetchLands())
+    }
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(LandsContainer);
