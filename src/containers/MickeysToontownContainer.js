@@ -36,6 +36,4 @@ class MickeysToontownContainer extends Component {
 
 const mapStateToProps = state => ({attractions: state.mickeysToontown.list})
 
-export default connect(mapStateToProps, {
-  fetchMickeysToonTown
-})(MickeysToontownContainer);
+export default connect(mapStateToProps, { fetchMickeysToonTown })(MickeysToontownContainer);

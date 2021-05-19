@@ -36,6 +36,4 @@ class NolaContainer extends Component {
 
 const mapStateToProps = state => ({attractions: state.nola.list})
 
-export default connect(mapStateToProps, {
-  fetchNola
-})(NolaContainer);
+export default connect(mapStateToProps, { fetchNola })(NolaContainer);

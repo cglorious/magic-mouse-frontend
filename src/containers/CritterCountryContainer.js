@@ -37,6 +37,4 @@ class CritterCountryContainer extends Component {
 
 const mapStateToProps = state => ({attractions: state.critterCountry.list})
 
-export default connect(mapStateToProps, {
-  fetchCritterCountry
-})(CritterCountryContainer);
+export default connect(mapStateToProps, { fetchCritterCountry })(CritterCountryContainer);

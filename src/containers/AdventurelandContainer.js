@@ -37,6 +37,4 @@ class AdventurelandContainer extends Component {
 
 const mapStateToProps = state => ({attractions: state.adventureland.list})
 
-export default connect(mapStateToProps, {
-  fetchAdventureland
-})(AdventurelandContainer);
+export default connect(mapStateToProps, { fetchAdventureland })(AdventurelandContainer);

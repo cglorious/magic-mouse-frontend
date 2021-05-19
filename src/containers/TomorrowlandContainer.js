@@ -37,6 +37,4 @@ class TomorrowlandContainer extends Component {
 
 const mapStateToProps = state => ({attractions: state.tomorrowland.list})
 
-export default connect(mapStateToProps, {
-  fetchTomorrowland
-})(TomorrowlandContainer);
+export default connect(mapStateToProps, { fetchTomorrowland })(TomorrowlandContainer);

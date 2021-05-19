@@ -8,6 +8,7 @@ import rootReducer from './reducers/rootReducer';
 
 import App from './App';
 
+//application communicates with Redux DevTools Chrome extension
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 let store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)) )

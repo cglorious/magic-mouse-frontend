@@ -36,6 +36,4 @@ class MainstreetContainer extends Component {
 
 const mapStateToProps = state => ({attractions: state.mainstreet.list})
 
-export default connect(mapStateToProps, {
-  fetchMainstreet
-})(MainstreetContainer);
+export default connect(mapStateToProps, { fetchMainstreet })(MainstreetContainer);

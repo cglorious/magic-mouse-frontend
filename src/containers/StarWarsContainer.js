@@ -38,6 +38,4 @@ class StarWarsContainer extends Component {
 
 const mapStateToProps = state => ({attractions: state.starWars.list})
 
-export default connect(mapStateToProps, {
-  fetchStarWars
-})(StarWarsContainer);
+export default connect(mapStateToProps, { fetchStarWars })(StarWarsContainer);
