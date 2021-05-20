@@ -29,6 +29,9 @@ const Land = ({id, image, name, description}) => {
     }
   }
 
+//add slug on backend
+//delete default, iterate for all
+
     return(
       <div>
         <div id="card-container">

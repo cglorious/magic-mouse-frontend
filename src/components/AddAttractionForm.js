@@ -20,7 +20,9 @@ class AddAttractionForm extends Component {
 
   handleSubmit = event => {
     event.preventDefault()
+    console.log('a')
     this.props.addAttraction(this.state)
+    console.log('g')
     this.setState({
       name: '',
       image_url: '',
@@ -91,4 +93,12 @@ class AddAttractionForm extends Component {
   }
 };
 
-export default connect(null, {addAttraction})(AddAttractionForm);
+const mapDispatchToProps = dispatch => {
+  return {
+    addAttraction: () => {
+      dispatch(addAttraction())
+    }
+  };
+};
+
+export default connect(null, mapDispatchToProps)(AddAttractionForm);
