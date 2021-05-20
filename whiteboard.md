@@ -1,28 +1,46 @@
 # Synchronous
-connect(mapStateToProps, mapDispatchToProps)
-- connect Redux and React parts of the application to LandsContainer
-
-mapStateToProps
-- pass down key as props to LandsContainer
-- lands: []
+connect(mapDispatchToProps)
+- pass down props to AddAttractionForm
 
 # Component Lifecycle - Mounting
 render()
-- render JSX
 
-componentDidMount()
+# Local Execution Context - handleSubmit()
+event.preventDefault()
 
-# Execution Context
+console.log('a')
 
-<!-- { f } -->
+this.props.addAttraction(this.state)
+invokes () => { dispatch(addAttraction())}
+returns dispatch(addAttraction(this.state))
+- middleware immediately kicks in with dispatch
+- since dispatch returns a function, add the { f } to the call stack
 
-<!-- fetchLands()
-//=> { f } -->
+console.log('g')
 
-<!-- dispatch(fetchLands()) -->
+this.setState()
 
-<!-- fetchLands() -->
+# Call Stack
 
-<!-- componentDidMount() -->
+{ f2 }
+addAttraction(this.state)
 
-# Async
+# Local Execution Context - addAttraction(this.state)
+console.log('b')
+return { f2 }
+console.log('f') does not render
+
+# Local Execution Context { f2 }
+console.log('c')
+
+fetch //=> Promise
+.then
+.then
+
+- if nothing is on the call stack, .then can parse JSON to JS object
+
+console.log('d')
+
+middleware dispatches action to the reducer to update the state
+
+console.log('e')
