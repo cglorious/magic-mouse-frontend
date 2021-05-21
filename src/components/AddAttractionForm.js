@@ -95,8 +95,8 @@ class AddAttractionForm extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    addAttraction: () => {
-      dispatch(addAttraction())
+    addAttraction: (data) => {
+      dispatch(addAttraction(data))
     }
   };
 };
