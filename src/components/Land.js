@@ -2,35 +2,7 @@ import React from 'react';
 import "../styles/style.css";
 import { Link } from 'react-router-dom'
 
-const Land = ({id, image, name, description}) => {
-
-  const handleClick = () => {
-    switch (id) {
-      case "1":
-        return '/lands/star-wars'
-      case "2":
-        return '/lands/fantasyland'
-      case "3":
-        return '/lands/tomorrowland'
-      case "4":
-        return '/lands/adventureland'
-      case "5":
-        return '/lands/critter-country'
-      case "6":
-        return '/lands/frontierland'
-      case "7":
-        return '/lands/mainstreet-usa'
-      case "8":
-        return '/lands/mickeys-toontown'
-      case "9":
-        return '/lands/new-orleans-square'
-      default:
-        return '/all-attractions'
-    }
-  }
-
-//add slug on backend
-//delete default, iterate for all
+const Land = ({id, image, name, description, slug}) => {
 
     return(
       <div>
@@ -44,7 +16,7 @@ const Land = ({id, image, name, description}) => {
             />
           <div className="card-body">
             <h5 className="card-title">
-              <Link to={handleClick()}>{name}</Link>
+              <Link to={slug}>{name}</Link>
             </h5>
             <p>{description}</p>
           </div>
