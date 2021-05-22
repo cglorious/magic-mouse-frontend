@@ -13,10 +13,20 @@ class LandsContainer extends Component {
     this.setState({
       [event.target.name]: event.target.value
     })
+    this.renderLands()
   }
 
-  //lands.map( land => land.attributes.name) - list of lands
+  //
+  renderLands = () => {
+    const array = this.props.lands.filter( land => land.attributes.name.includes(this.state.search))
+    console.log(array)
+  }
+
+  //lands.filter( land => land.attributes.name) - list of lands
   //this.state.search - value of the input
+
+  //lands.filter( land => land.attributes.name.includes(this.state.search))
+
   //compare the state to the letters
   //strings
 
@@ -34,19 +44,20 @@ class LandsContainer extends Component {
 
     return (
       <div className="App">
-        <h4>searchbar container</h4>
+        <p>Enter land name below</p>
           <input
             name='search'
             value={this.state.search}
             onChange={this.handleChange}
             ></input>
-        <Lands
-          lands={this.props.lands}
-          />
       </div>
     );
   }
 }
+
+// <Lands
+//   lands={this.props.lands}
+//   />
 
 const mapStateToProps = state => ({lands: state.lands.list})
 
