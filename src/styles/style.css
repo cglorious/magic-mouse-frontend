@@ -22,6 +22,14 @@
   width: 100%
 }
 
+/* Lands */
+.center {
+  text-align: center;
+  padding-top: 25px;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
 /* Park */
 #park-card-image{
   height: 125px;
