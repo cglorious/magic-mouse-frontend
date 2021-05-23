@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchLands } from '../actions/fetchLands'
 import Lands from '../components/Lands';
+import "../styles/style.css";
 
 class LandsContainer extends Component {
 
@@ -24,11 +25,17 @@ class LandsContainer extends Component {
       )
     } else {
       let query = this.props.lands.filter( land => land.attributes.name.includes(this.state.search) || land.attributes.name.toLowerCase().includes(this.state.search) )
-      return (
-        <Lands
-          lands={query}
-          />
-      )
+      if (query.length > 0) {
+        return (
+          <Lands
+            lands={query}
+            />
+        )
+      } else {
+        return (
+          <div className='error'>Sorry, we can't find that land. Try another search.</div>
+        )
+      }
     }
   }
 

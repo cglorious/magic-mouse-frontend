@@ -29,6 +29,11 @@
   padding-right: 50px;
   padding-left: 50px;
 }
+.error {
+  text-align: center;
+  padding: 50px;
+  color: #DB0000;
+}
 
 /* Park */
 #park-card-image{
