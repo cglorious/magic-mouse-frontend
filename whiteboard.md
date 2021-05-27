@@ -1,46 +1,49 @@
-# Synchronous
-connect(mapDispatchToProps)
-- pass down props to AddAttractionForm
+# Search bar feature - lands
+- responds to user input
+- filters view of lands
 
-# Component Lifecycle - Mounting
-render()
+# Data (state/props)
+- Does this need state? Y
+- Does it need props? Y
+- Local or in store? Local
+- state in LandsContainer; this.state.search
 
-# Local Execution Context - handleSubmit()
-event.preventDefault()
+# Display (rendering / logic JSX)
+- Input JSX
+- Attributes (MVP): name= , value=, onChange=
+- value={this.state.search}
+- renderLands()
 
-console.log('a')
+# Events (listeners / handlers)
+- Listen to onChange={ handleChange() } on the <input/>
+- When value of input changes, invoke a function - handleChange() - to update the {this.state.search}
 
-this.props.addAttraction(this.state)
-invokes () => { dispatch(addAttraction())}
-returns dispatch(addAttraction(this.state))
-- middleware immediately kicks in with dispatch
-- since dispatch returns a function, add the { f } to the call stack
+# handleChange()
+- update the state
 
-console.log('g')
+# renderLands()
+- create function - arrow/regular? arrow
+- Why? need access to parent context to get local state; this.state
+- access slice of store (state) from line 66 - this.props.lands
+- this.props.lands is an array
+- iterate through the array to return a new array - query
+- see if the elements of this.props.lands includes the value that's in the input (this.state.search)
+- if so, render the data
+- pass data to props of Lands
 
-this.setState()
+* arrow functions to distinguish event handlers / callbacks
+* regular functions - render
 
-# Call Stack
+# Stretch
+- render all lands if input is blank
+- adjust function to respond to uppercase of lowercase
+- respond to error
+- implement Bootstrap for style
 
-{ f2 }
-addAttraction(this.state)
+* turn into blog post
 
-# Local Execution Context - addAttraction(this.state)
-console.log('b')
-return { f2 }
-console.log('f') does not render
-
-# Local Execution Context { f2 }
-console.log('c')
-
-fetch //=> Promise
-.then
-.then
-
-- if nothing is on the call stack, .then can parse JSON to JS object
-
-console.log('d')
-
-middleware dispatches action to the reducer to update the state
-
-console.log('e')
+# Refactor
+- local state - loading spinner - true
+- 'hello'.includes('') /=> true
+- test conditions
+- filter rides by age/height

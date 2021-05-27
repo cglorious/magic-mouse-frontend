@@ -55,7 +55,7 @@ class LandsContainer extends Component {
             type="search"
             className="form-control ds-input"
             placeholder="Search lands..."
-            ></input>
+            />
         </div>
         <div>{this.renderLands()}</div>
       </div>
