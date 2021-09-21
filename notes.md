@@ -9,7 +9,7 @@
 [ x ] render count
 
 #### Stretch
-[   ] maintain count when moving to another page
+[   ] As Coco, I want to log the count of attractions when moving to another page so I know how many rides I rode.
 [   ] persist to the database
 
 ## TODO
